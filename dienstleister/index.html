@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nexa – Digitale Lösungen, die wachsen</title>
+<meta name="description" content="Nexa – Agentur für digitale Strategie, Design und Entwicklung. Wir bauen Produkte, die Ihr Unternehmen nach vorne bringen.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#0a0a14;--bg2:#0f1020;--glass:rgba(255,255,255,.05);--glass-b:rgba(255,255,255,.1);--ink:#f2f3fb;--muted:#9aa0c0;--vio:#7c5cff;--cyan:#22d3ee;--line:rgba(255,255,255,.08)}
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:'Space Grotesk',system-ui,sans-serif;line-height:1.6;overflow-x:hidden}
+  h1,h2,h3{font-weight:700;line-height:1.08;letter-spacing:-.02em}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+  a{color:inherit;text-decoration:none}
+  .grad-text{background:linear-gradient(100deg,var(--vio),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .btn{display:inline-flex;align-items:center;gap:9px;background:linear-gradient(100deg,var(--vio),var(--cyan));color:#08080f;font-weight:600;padding:14px 26px;border-radius:12px;font-size:15px;border:none;cursor:pointer;font-family:'Space Grotesk';transition:transform .2s,box-shadow .2s}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 14px 36px rgba(124,92,255,.4)}
+  .btn.ghost{background:var(--glass);color:var(--ink);border:1px solid var(--glass-b);backdrop-filter:blur(8px)}
+  .btn.ghost:hover{box-shadow:none;border-color:var(--cyan)}
+
+  header.nav{position:sticky;top:0;z-index:50;background:rgba(10,10,20,.7);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .brand{display:flex;align-items:center;gap:11px;font-weight:700;font-size:22px;letter-spacing:-.01em}
+  .nav-links{display:flex;gap:28px;align-items:center}
+  .nav-links a{color:var(--muted);font-size:15px;font-weight:500;transition:color .2s}
+  .nav-links a:hover{color:var(--ink)}
+  @media(max-width:840px){.nav-links a:not(.btn){display:none}}
+
+  .blob{position:absolute;border-radius:50%;filter:blur(70px);z-index:0;opacity:.55;animation:blob 12s ease-in-out infinite}
+  @keyframes blob{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(40px,-30px) scale(1.15)}66%{transform:translate(-30px,20px) scale(.9)}}
+
+  .hero{padding:80px 0 100px;position:relative;overflow:hidden}
+  .hero-in{position:relative;z-index:2;text-align:center;max-width:860px;margin:0 auto}
+  .pill{display:inline-flex;align-items:center;gap:9px;background:var(--glass);border:1px solid var(--glass-b);color:var(--ink);font-weight:500;font-size:13px;padding:8px 16px;border-radius:30px;margin-bottom:26px;backdrop-filter:blur(8px)}
+  .pill .d{width:8px;height:8px;border-radius:50%;background:var(--cyan);box-shadow:0 0 12px var(--cyan)}
+  .hero h1{font-size:clamp(42px,7vw,82px)}
+  .hero p.lead{color:var(--muted);font-size:19px;margin:26px auto 34px;max-width:560px}
+  .hero-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+  /* glass stat cards */
+  .glass-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:64px;position:relative;z-index:2}
+  .gcard{background:var(--glass);border:1px solid var(--glass-b);border-radius:18px;padding:26px;backdrop-filter:blur(10px);text-align:left;transition:transform .3s,border-color .3s}
+  .gcard:hover{transform:translateY(-6px);border-color:var(--cyan)}
+  .gcard .num{font-size:clamp(30px,4vw,42px);font-weight:700}
+  .gcard .lab{color:var(--muted);font-size:14px;margin-top:4px}
+  @media(max-width:840px){.glass-stats{grid-template-columns:1fr 1fr}}
+
+  .sec{padding:100px 0;position:relative}
+  .sec-head{max-width:640px;margin-bottom:56px}
+  .sec-head.center{margin:0 auto 56px;text-align:center}
+  .sec-head .pill{margin-bottom:18px}
+  .sec-head h2{font-size:clamp(32px,4.6vw,50px)}
+  .sec-head p{color:var(--muted);font-size:17px;margin-top:16px}
+
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  @media(max-width:840px){.grid3{grid-template-columns:1fr}}
+  .card{background:var(--glass);border:1px solid var(--glass-b);border-radius:18px;padding:32px;backdrop-filter:blur(10px);transition:transform .3s,border-color .3s;position:relative;overflow:hidden}
+  .card::before{content:"";position:absolute;inset:0;background:radial-gradient(400px 200px at 100% 0,rgba(124,92,255,.18),transparent 60%);opacity:0;transition:opacity .3s}
+  .card:hover{transform:translateY(-6px);border-color:var(--vio)}
+  .card:hover::before{opacity:1}
+  .card .ic{width:56px;height:56px;border-radius:14px;background:linear-gradient(120deg,rgba(124,92,255,.25),rgba(34,211,238,.2));display:flex;align-items:center;justify-content:center;margin-bottom:18px;position:relative;z-index:2}
+  .card h3{font-size:21px;margin-bottom:8px;position:relative;z-index:2}
+  .card p{color:var(--muted);font-size:15px;position:relative;z-index:2}
+
+  /* why + chart */
+  .why-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center}
+  @media(max-width:840px){.why-grid{grid-template-columns:1fr}}
+  .why-list{margin-top:26px;display:grid;gap:18px}
+  .why-item{display:flex;gap:14px;align-items:flex-start}
+  .why-item .ck{width:38px;height:38px;border-radius:11px;background:linear-gradient(120deg,var(--vio),var(--cyan));display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+  .why-item h4{font-size:17px;margin-bottom:2px}
+  .why-item p{color:var(--muted);font-size:14px}
+  .chart{background:var(--glass);border:1px solid var(--glass-b);border-radius:22px;padding:34px;backdrop-filter:blur(10px)}
+  .chart .head{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}
+  .chart .head b{font-size:16px}.chart .head span{color:var(--cyan);font-size:14px;font-weight:600}
+  .bars{display:flex;align-items:flex-end;gap:16px;height:200px}
+  .bar{flex:1;border-radius:8px 8px 0 0;background:linear-gradient(180deg,var(--vio),var(--cyan));transform-origin:bottom;transform:scaleY(0);transition:transform 1s cubic-bezier(.2,.7,.2,1)}
+  .bars.go .bar{transform:scaleY(1)}
+  .bars .bar:nth-child(2){transition-delay:.12s}.bars .bar:nth-child(3){transition-delay:.24s}.bars .bar:nth-child(4){transition-delay:.36s}.bars .bar:nth-child(5){transition-delay:.48s}
+  .blabs{display:flex;gap:16px;margin-top:10px}
+  .blabs span{flex:1;text-align:center;color:var(--muted);font-size:12px}
+
+  .quote{background:var(--glass);border:1px solid var(--glass-b);border-radius:18px;padding:30px;backdrop-filter:blur(10px)}
+  .quote .stars{color:var(--cyan);letter-spacing:2px;margin-bottom:12px}
+  .quote p{font-size:16px;margin-bottom:18px}
+  .who{display:flex;align-items:center;gap:12px}
+  .who .av{width:44px;height:44px;border-radius:50%}
+  .who b{font-weight:600}.who span{display:block;color:var(--muted);font-size:13px}
+
+  /* CTA email */
+  .cta{position:relative;overflow:hidden}
+  .cta-box{background:linear-gradient(120deg,rgba(124,92,255,.18),rgba(34,211,238,.12));border:1px solid var(--glass-b);border-radius:26px;padding:64px;text-align:center;backdrop-filter:blur(12px);position:relative;overflow:hidden}
+  .cta-box h2{font-size:clamp(30px,4.4vw,50px)}
+  .cta-box p{color:var(--muted);margin:16px auto 30px;max-width:520px;font-size:17px}
+  .email-form{display:flex;gap:12px;max-width:480px;margin:0 auto;position:relative;z-index:2}
+  .email-form input{flex:1;background:rgba(0,0,0,.3);border:1px solid var(--glass-b);border-radius:12px;padding:15px 18px;color:var(--ink);font-family:'Space Grotesk';font-size:15px}
+  .email-form input:focus{outline:none;border-color:var(--cyan)}
+  .form-ok-inline{display:none;margin-top:18px;color:var(--cyan);font-weight:600}
+  .form-ok-inline.show{display:block}
+  form.sent .email-form{display:none}
+  @media(max-width:560px){.email-form{flex-direction:column}}
+
+  footer{padding:50px 0 90px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+  .foot-in{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
+  .foot-in b{color:var(--ink)}
+
+  .reveal{opacity:0;transform:translateY(32px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  .reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}
+
+  .demo-badge{position:fixed;left:18px;bottom:18px;z-index:80;display:inline-flex;align-items:center;gap:8px;background:var(--glass);border:1px solid var(--glass-b);color:var(--ink);padding:9px 14px;border-radius:30px;font-size:12.5px;font-weight:600;backdrop-filter:blur(10px);transition:transform .2s}
+  .demo-badge:hover{transform:translateY(-2px);border-color:var(--cyan)}
+  .demo-badge .dot{width:8px;height:8px;border-radius:50%;background:var(--cyan);box-shadow:0 0 10px var(--cyan)}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top">
+      <svg width="34" height="34" viewBox="0 0 40 40"><defs><linearGradient id="ng" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c5cff"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs><rect width="40" height="40" rx="11" fill="url(#ng)"/><path d="M12 28V12l16 16V12" stroke="#08080f" stroke-width="3.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Nexa
+    </a>
+    <nav class="nav-links">
+      <a href="#leistungen">Leistungen</a>
+      <a href="#warum">Warum Nexa</a>
+      <a href="#stimmen">Referenzen</a>
+      <a href="#kontakt" class="btn">Projekt starten</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="blob" style="width:420px;height:420px;background:#7c5cff;top:-120px;left:5%"></div>
+  <div class="blob" style="width:380px;height:380px;background:#22d3ee;top:40px;right:2%;animation-delay:3s"></div>
+  <div class="wrap">
+    <div class="hero-in reveal in">
+      <span class="pill"><span class="d"></span> Digitalagentur · Strategie · Design · Code</span>
+      <h1>Wir bauen Digitales, das <span class="grad-text">wächst</span>.</h1>
+      <p class="lead">Von der Strategie bis zum fertigen Produkt: Nexa entwickelt Websites, Apps und Marken, die messbar Ergebnisse liefern.</p>
+      <div class="hero-cta">
+        <a href="#kontakt" class="btn">Kostenloses Erstgespräch</a>
+        <a href="#leistungen" class="btn ghost">Leistungen entdecken</a>
+      </div>
+    </div>
+    <div class="glass-stats">
+      <div class="gcard reveal"><div class="num grad-text" data-count="180" data-suffix="+">0</div><div class="lab">Projekte gelauncht</div></div>
+      <div class="gcard reveal d1"><div class="num grad-text" data-count="3.4" data-dec="1" data-suffix="×">0</div><div class="lab">Ø Umsatz-Wachstum</div></div>
+      <div class="gcard reveal d2"><div class="num grad-text" data-count="98" data-suffix="%">0</div><div class="lab">Kundenzufriedenheit</div></div>
+      <div class="gcard reveal d3"><div class="num grad-text" data-count="12">0</div><div class="lab">Jahre Erfahrung</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="leistungen">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="pill"><span class="d"></span> Was wir tun</span>
+      <h2>Ein Team für Ihre gesamte digitale Reise</h2>
+      <p>Sechs Kompetenzen, die nahtlos ineinandergreifen – kein Chaos aus vielen Dienstleistern.</p>
+    </div>
+    <div class="grid3">
+      <div class="card reveal"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10M12 2v10l7 7"/></svg></div><h3>Strategie</h3><p>Wir analysieren Markt, Zielgruppe und Ziele – und bauen daraus einen klaren Fahrplan.</p></div>
+      <div class="card reveal d1"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 21V9"/></svg></div><h3>UX / UI Design</h3><p>Interfaces, die intuitiv wirken und begeistern – vom Wireframe bis zum Prototyp.</p></div>
+      <div class="card reveal d2"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></svg></div><h3>Entwicklung</h3><p>Performante Websites und Web-Apps mit modernem Stack – skalierbar und wartbar.</p></div>
+      <div class="card reveal"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2"><path d="M3 17l6-6 4 4 8-8M21 7v6h-6"/></svg></div><h3>Growth Marketing</h3><p>SEO, Ads und Funnels, die aus Besuchern echte Kunden machen.</p></div>
+      <div class="card reveal d1"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18M3 12h18"/></svg></div><h3>Branding</h3><p>Marken mit Haltung – Logo, Farbwelt und Sprache aus einem Guss.</p></div>
+      <div class="card reveal d2"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2"><path d="M4 4h16v12H4z M2 20h20M9 20v-4M15 20v-4"/></svg></div><h3>Support & Betrieb</h3><p>Wir bleiben an Bord: Hosting, Updates und laufende Optimierung.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="warum" style="background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap why-grid">
+    <div class="reveal">
+      <span class="pill"><span class="d"></span> Warum Nexa</span>
+      <h2 style="margin-top:16px;font-size:clamp(30px,4vw,44px)">Wir liefern nicht nur schön – wir liefern <span class="grad-text">Ergebnisse</span>.</h2>
+      <div class="why-list">
+        <div class="why-item"><span class="ck"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#08080f" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg></span><div><h4>Datengetrieben</h4><p>Jede Entscheidung ist mit Zahlen belegt – kein Bauchgefühl, sondern Wirkung.</p></div></div>
+        <div class="why-item"><span class="ck"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#08080f" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg></span><div><h4>Ein festes Team</h4><p>Dieselben Ansprechpartner vom Kickoff bis zum Launch – volle Verantwortung.</p></div></div>
+        <div class="why-item"><span class="ck"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#08080f" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg></span><div><h4>Transparente Preise</h4><p>Klare Pakete, feste Budgets, keine versteckten Kosten.</p></div></div>
+      </div>
+    </div>
+    <div class="chart reveal d1">
+      <div class="head"><b>Conversion-Wachstum</b><span>+218 %</span></div>
+      <div class="bars" id="bars">
+        <div class="bar" style="height:38%"></div>
+        <div class="bar" style="height:55%"></div>
+        <div class="bar" style="height:70%"></div>
+        <div class="bar" style="height:86%"></div>
+        <div class="bar" style="height:100%"></div>
+      </div>
+      <div class="blabs"><span>Q1</span><span>Q2</span><span>Q3</span><span>Q4</span><span>Q5</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="stimmen">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="pill"><span class="d"></span> Kundenstimmen</span>
+      <h2>Marken, die mit uns gewachsen sind</h2>
+    </div>
+    <div class="grid3">
+      <div class="quote reveal"><div class="stars">★★★★★</div><p>„Nexa hat unseren Onlineshop komplett neu gedacht. Ergebnis: 3× mehr Umsatz in sechs Monaten.“</p><div class="who"><svg class="av" viewBox="0 0 44 44"><defs><linearGradient id="a1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c5cff"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs><circle cx="22" cy="22" r="22" fill="url(#a1)"/><text x="22" y="29" text-anchor="middle" font-family="Space Grotesk" font-weight="700" font-size="15" fill="#08080f">LR</text></svg><div><b>Lisa Reimann</b><span>CEO, Vello Shop</span></div></div></div>
+      <div class="quote reveal d1"><div class="stars">★★★★★</div><p>„Endlich eine Agentur, die mitdenkt und liefert. Die Zusammenarbeit war einfach mühelos.“</p><div class="who"><svg class="av" viewBox="0 0 44 44"><circle cx="22" cy="22" r="22" fill="url(#a1)"/><text x="22" y="29" text-anchor="middle" font-family="Space Grotesk" font-weight="700" font-size="15" fill="#08080f">TK</text></svg><div><b>Tobias Krause</b><span>Gründer, Finlytic</span></div></div></div>
+      <div class="quote reveal d2"><div class="stars">★★★★★</div><p>„Vom Branding bis zur App alles aus einer Hand – und jedes Detail hat gesessen.“</p><div class="who"><svg class="av" viewBox="0 0 44 44"><circle cx="22" cy="22" r="22" fill="url(#a1)"/><text x="22" y="29" text-anchor="middle" font-family="Space Grotesk" font-weight="700" font-size="15" fill="#08080f">MN</text></svg><div><b>Mara Novak</b><span>CMO, Pulse Health</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec cta" id="kontakt">
+  <div class="blob" style="width:360px;height:360px;background:#7c5cff;bottom:-140px;left:20%;opacity:.4"></div>
+  <div class="wrap">
+    <div class="cta-box reveal">
+      <h2>Lassen Sie uns etwas <span class="grad-text">Großes</span> bauen.</h2>
+      <p>Tragen Sie Ihre E-Mail ein – wir melden uns innerhalb eines Werktags mit Ideen für Ihr Projekt.</p>
+      <form onsubmit="return sendForm(event,this)">
+        <div class="email-form">
+          <input required type="email" placeholder="ihre@firma.de">
+          <button class="btn" type="submit">Erstgespräch sichern</button>
+        </div>
+        <div class="form-ok-inline">✓ Danke! Wir haben Ihre Anfrage erhalten und melden uns in Kürze.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-in">
+    <div><b>Nexa</b> · Demo-Referenz · Digitalagentur · Torstraße 40, 10119 Berlin</div>
+    <div>Erfundenes Beispielunternehmen · Kein reales Angebot</div>
+  </div>
+</footer>
+
+<a class="demo-badge" href="../index.html"><span class="dot"></span> Demo-Referenz · zur Übersicht</a>
+
+<script>
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.14});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  const cio=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){count(e.target);cio.unobserve(e.target)}})},{threshold:.6});
+  document.querySelectorAll('[data-count]').forEach(el=>cio.observe(el));
+  function count(el){const t=+el.dataset.count,dec=+(el.dataset.dec||0),suf=el.dataset.suffix||'';let st=performance.now(),d=1500;
+    function tick(now){let p=Math.min((now-st)/d,1);p=1-Math.pow(1-p,3);let v=(t*p).toFixed(dec);
+      el.textContent=(dec?v.replace('.',','):Math.round(t*p))+suf;if(p<1)requestAnimationFrame(tick)}requestAnimationFrame(tick)}
+  const bio=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){document.getElementById('bars').classList.add('go');bio.unobserve(e.target)}})},{threshold:.4});
+  bio.observe(document.getElementById('bars'));
+  function sendForm(e,f){e.preventDefault();f.classList.add('sent');f.querySelector('.form-ok-inline').classList.add('show');return false}
+</script>
+</body>
+</html>

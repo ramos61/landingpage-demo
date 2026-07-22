@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meridian – Beratung für ambitionierte Marken</title>
+<meta name="description" content="Meridian – Strategieberatung für Marken mit Anspruch. Klarheit, Positionierung und Wachstum, editorial gedacht.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#f4f3ef;--paper:#faf9f6;--ink:#16150f;--muted:#6a685e;--coral:#ff4d2e;--line:#dedcd2}
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:'Archivo',system-ui,sans-serif;line-height:1.55;overflow-x:hidden}
+  h1,h2,h3{font-weight:800;line-height:1;letter-spacing:-.03em}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+  a{color:inherit;text-decoration:none}
+  .btn{display:inline-flex;align-items:center;gap:9px;background:var(--ink);color:var(--bg);font-weight:600;padding:15px 30px;border-radius:0;font-size:15px;border:none;cursor:pointer;font-family:'Archivo';transition:background .2s,transform .2s}
+  .btn:hover{background:var(--coral);transform:translateY(-2px)}
+  .btn.coral{background:var(--coral);color:#fff}
+  .btn.coral:hover{background:var(--ink)}
+  .btn.line{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+  .btn.line:hover{background:var(--ink);color:var(--bg)}
+
+  header.nav{position:sticky;top:0;z-index:50;background:rgba(244,243,239,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:78px}
+  .brand{font-weight:900;font-size:24px;letter-spacing:-.04em}
+  .brand span{color:var(--coral)}
+  .nav-links{display:flex;gap:32px;align-items:center}
+  .nav-links a{color:var(--ink);font-size:15px;font-weight:500;transition:color .2s}
+  .nav-links a:hover{color:var(--coral)}
+  @media(max-width:840px){.nav-links a:not(.btn){display:none}}
+
+  /* HERO big typo */
+  .hero{padding:70px 0 40px}
+  .hero .meta{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;color:var(--muted);font-size:13px;letter-spacing:2px;text-transform:uppercase;font-weight:600;border-bottom:1px solid var(--line);padding-bottom:22px;margin-bottom:40px}
+  .hero h1{font-size:clamp(52px,13vw,170px);text-transform:uppercase}
+  .hero h1 .c{color:var(--coral)}
+  .hero-bottom{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:end;margin-top:30px}
+  .hero-bottom p{font-size:20px;max-width:440px;color:var(--muted)}
+  .hero-bottom .actions{display:flex;gap:14px;flex-wrap:wrap;justify-content:flex-end}
+  @media(max-width:840px){.hero-bottom{grid-template-columns:1fr}.hero-bottom .actions{justify-content:flex-start}}
+
+  /* marquee */
+  .marquee{border-top:1.5px solid var(--ink);border-bottom:1.5px solid var(--ink);overflow:hidden;padding:18px 0;margin-top:50px;background:var(--ink)}
+  .mtrack{display:flex;gap:40px;white-space:nowrap;width:max-content;animation:scroll 24s linear infinite;color:var(--bg);font-weight:800;font-size:26px;text-transform:uppercase;letter-spacing:-.02em}
+  .mtrack span{display:inline-flex;gap:40px;align-items:center}
+  .mtrack span i{color:var(--coral);font-style:normal}
+  @keyframes scroll{to{transform:translateX(-50%)}}
+
+  .sec{padding:110px 0}
+  .lbl{display:inline-flex;align-items:center;gap:10px;color:var(--coral);font-size:13px;letter-spacing:3px;text-transform:uppercase;font-weight:700;margin-bottom:22px}
+  .lbl::before{content:"";width:26px;height:2px;background:var(--coral)}
+  .sec-head h2{font-size:clamp(34px,6vw,72px);text-transform:uppercase;max-width:900px}
+
+  /* numbered services */
+  .slist{margin-top:56px;border-top:1px solid var(--line)}
+  .srow{display:grid;grid-template-columns:100px 1fr 1.2fr 60px;gap:24px;align-items:center;padding:34px 0;border-bottom:1px solid var(--line);transition:padding .3s,background .3s;position:relative}
+  .srow:hover{padding-left:20px;padding-right:20px;background:var(--paper)}
+  .srow .no{font-size:22px;font-weight:800;color:var(--coral)}
+  .srow h3{font-size:clamp(26px,3.6vw,40px);text-transform:uppercase;font-weight:800}
+  .srow p{color:var(--muted);font-size:16px}
+  .srow .arr{justify-self:end;transition:transform .3s}
+  .srow:hover .arr{transform:translate(6px,-6px)}
+  @media(max-width:840px){.srow{grid-template-columns:60px 1fr;gap:12px}.srow p,.srow .arr{display:none}}
+
+  /* approach + rotating circle */
+  .approach{background:var(--ink);color:var(--bg)}
+  .ap-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+  @media(max-width:840px){.ap-grid{grid-template-columns:1fr}}
+  .approach .lbl{color:var(--coral)}
+  .approach h2{font-size:clamp(32px,4.6vw,58px);text-transform:uppercase}
+  .approach p.big{font-size:19px;color:#c9c7bd;margin-top:22px;max-width:460px}
+  .ap-points{margin-top:30px;display:grid;gap:2px}
+  .ap-point{display:flex;justify-content:space-between;padding:16px 0;border-bottom:1px solid #33322b}
+  .ap-point b{font-weight:600;font-size:17px}
+  .ap-point span{color:var(--coral);font-weight:700}
+  .circle-wrap{display:flex;justify-content:center}
+  .rotor{animation:spin 30s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .rotor-r{animation:spin 20s linear infinite reverse}
+
+  /* big stats */
+  .bigstats{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1.5px solid var(--ink)}
+  .bstat{padding:50px 30px;border-bottom:1.5px solid var(--ink);border-right:1px solid var(--line)}
+  .bstat:last-child{border-right:none}
+  .bstat .num{font-size:clamp(56px,9vw,120px);font-weight:900;line-height:.9;letter-spacing:-.05em}
+  .bstat .num .c{color:var(--coral)}
+  .bstat .lab{margin-top:14px;color:var(--muted);font-size:15px;text-transform:uppercase;letter-spacing:1px;font-weight:600}
+  @media(max-width:840px){.bigstats{grid-template-columns:1fr}.bstat{border-right:none}}
+
+  /* big quote */
+  .bigq{padding:120px 0}
+  .bigq blockquote{font-size:clamp(30px,5vw,62px);font-weight:800;text-transform:uppercase;line-height:1.05;letter-spacing:-.03em;max-width:1000px}
+  .bigq blockquote .c{color:var(--coral)}
+  .bigq .cite{margin-top:36px;display:flex;align-items:center;gap:16px;color:var(--muted);font-size:15px;font-weight:600}
+  .bigq .cite .ln{width:50px;height:2px;background:var(--coral)}
+
+  /* coral contact */
+  .contact{background:var(--coral);color:#fff}
+  .ct-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  @media(max-width:840px){.ct-grid{grid-template-columns:1fr}}
+  .contact h2{font-size:clamp(38px,6vw,84px);text-transform:uppercase;line-height:.95}
+  .contact p.sub{font-size:18px;margin-top:20px;max-width:400px;opacity:.9}
+  .field{margin-bottom:16px}
+  .field label{display:block;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;font-weight:700;margin-bottom:7px}
+  .field input,.field select,.field textarea{width:100%;background:rgba(255,255,255,.14);border:1.5px solid rgba(255,255,255,.4);border-radius:0;padding:14px 16px;color:#fff;font-family:'Archivo';font-size:15px}
+  .field input::placeholder,.field textarea::placeholder{color:rgba(255,255,255,.6)}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:#fff;background:rgba(255,255,255,.22)}
+  .field select{color:#fff}.field select option{color:#16150f}
+  .form-note{font-size:12px;opacity:.85;margin-top:8px}
+  .form-ok{display:none;padding:24px 0}
+  .form-ok.show{display:block}
+  .form-ok h4{font-size:30px;text-transform:uppercase}.form-ok p{opacity:.9;margin-top:8px}
+  form.sent .form-body{display:none}
+
+  footer{padding:50px 0 92px;background:var(--ink);color:#a3a196;font-size:14px}
+  .foot-in{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
+  .foot-in b{color:var(--bg)}
+
+  .reveal{opacity:0;transform:translateY(34px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  .reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}
+
+  .demo-badge{position:fixed;left:18px;bottom:18px;z-index:80;display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:var(--bg);padding:10px 15px;border-radius:0;font-size:12.5px;font-weight:700;box-shadow:0 8px 24px rgba(0,0,0,.2);transition:transform .2s}
+  .demo-badge:hover{transform:translateY(-2px);background:var(--coral)}
+  .demo-badge .dot{width:8px;height:8px;border-radius:50%;background:var(--coral)}
+  .demo-badge:hover .dot{background:#fff}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top">Meridian<span>.</span></a>
+    <nav class="nav-links">
+      <a href="#leistungen">Leistungen</a>
+      <a href="#ansatz">Ansatz</a>
+      <a href="#zahlen">Zahlen</a>
+      <a href="#kontakt" class="btn">Anfragen</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="meta reveal in">
+      <span>Strategieberatung</span>
+      <span>Est. 2014 · Berlin</span>
+      <span>Positionierung — Wachstum</span>
+    </div>
+    <h1 class="reveal in">Klarheit<br>schafft <span class="c">Wachstum</span></h1>
+    <div class="hero-bottom">
+      <p class="reveal in d1">Meridian ist die Beratung für Marken mit Anspruch. Wir schärfen Ihre Position, bis sie unverwechselbar ist – und übersetzen sie in Wachstum.</p>
+      <div class="actions reveal in d2">
+        <a href="#kontakt" class="btn coral">Projekt anfragen</a>
+        <a href="#leistungen" class="btn line">Leistungen</a>
+      </div>
+    </div>
+  </div>
+  <div class="marquee">
+    <div class="mtrack">
+      <span>Positionierung <i>✳</i> Markenstrategie <i>✳</i> Naming <i>✳</i> Go-to-Market <i>✳</i> Wachstum <i>✳</i></span>
+      <span>Positionierung <i>✳</i> Markenstrategie <i>✳</i> Naming <i>✳</i> Go-to-Market <i>✳</i> Wachstum <i>✳</i></span>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="leistungen">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="lbl">Leistungen</span>
+      <h2>Was wir für Ihre Marke bewegen</h2>
+    </div>
+    <div class="slist">
+      <div class="srow reveal"><div class="no">01</div><h3>Positionierung</h3><p>Wir finden den Punkt, an dem Ihre Stärke und der Bedarf des Marktes sich treffen.</p><svg class="arr" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#16150f" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></div>
+      <div class="srow reveal"><div class="no">02</div><h3>Markenstrategie</h3><p>Von Werten bis Tonalität – ein Fundament, das jede Entscheidung leichter macht.</p><svg class="arr" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#16150f" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></div>
+      <div class="srow reveal"><div class="no">03</div><h3>Naming & Identity</h3><p>Namen und Identitäten, die im Kopf bleiben und über Jahre tragen.</p><svg class="arr" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#16150f" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></div>
+      <div class="srow reveal"><div class="no">04</div><h3>Go-to-Market</h3><p>Vom Konzept zum Launch – mit klaren Kanälen, Botschaften und Meilensteinen.</p><svg class="arr" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#16150f" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></div>
+      <div class="srow reveal"><div class="no">05</div><h3>Wachstums­beratung</h3><p>Wir begleiten Sie über den Launch hinaus – datengestützt und ergebnisorientiert.</p><svg class="arr" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#16150f" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec approach" id="ansatz">
+  <div class="wrap ap-grid">
+    <div class="reveal">
+      <span class="lbl">Unser Ansatz</span>
+      <h2>Weniger Buzzwords.<br>Mehr Substanz.</h2>
+      <p class="big">Wir arbeiten in klaren Phasen – jede mit einem definierten Ergebnis. So wissen Sie immer, woran Sie sind.</p>
+      <div class="ap-points">
+        <div class="ap-point"><b>Verstehen</b><span>Woche 1–2</span></div>
+        <div class="ap-point"><b>Positionieren</b><span>Woche 3–5</span></div>
+        <div class="ap-point"><b>Gestalten</b><span>Woche 6–9</span></div>
+        <div class="ap-point"><b>Wachsen</b><span>fortlaufend</span></div>
+      </div>
+    </div>
+    <div class="circle-wrap reveal d1">
+      <svg viewBox="0 0 320 320" width="100%" style="max-width:360px">
+        <g class="rotor" style="transform-origin:160px 160px">
+          <circle cx="160" cy="160" r="150" fill="none" stroke="#33322b" stroke-width="1"/>
+          <path id="cp" d="M160 160m-118 0a118 118 0 1 1 236 0a118 118 0 1 1 -236 0" fill="none"/>
+          <text fill="#f4f3ef" font-size="15" font-weight="700" letter-spacing="5"><textPath href="#cp">MERIDIAN · STRATEGIE · POSITIONIERUNG · WACHSTUM · </textPath></text>
+        </g>
+        <g class="rotor-r" style="transform-origin:160px 160px">
+          <circle cx="160" cy="160" r="86" fill="none" stroke="#ff4d2e" stroke-width="1.5" stroke-dasharray="6 8"/>
+        </g>
+        <circle cx="160" cy="160" r="54" fill="#ff4d2e"/>
+        <path d="M138 160l16 16 30-34" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="zahlen" style="padding-top:0">
+  <div class="wrap">
+    <div class="bigstats">
+      <div class="bstat reveal"><div class="num" data-count="140"><span class="v">0</span><span class="c">+</span></div><div class="lab">Marken beraten</div></div>
+      <div class="bstat reveal d1"><div class="num" data-count="3.2" data-dec="1"><span class="v">0</span><span class="c">×</span></div><div class="lab">Ø Wachstum</div></div>
+      <div class="bstat reveal d2"><div class="num" data-count="11"><span class="v">0</span></div><div class="lab">Jahre Erfahrung</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="bigq">
+  <div class="wrap">
+    <blockquote class="reveal">„Eine Marke ist nicht, was <span class="c">Sie</span> sagen, dass Sie sind. Sie ist, was andere über Sie <span class="c">erzählen</span>, wenn Sie nicht im Raum sind.“</blockquote>
+    <div class="cite reveal d1"><span class="ln"></span> Grundprinzip von Meridian</div>
+  </div>
+</section>
+
+<section class="sec contact" id="kontakt">
+  <div class="wrap ct-grid">
+    <div class="reveal">
+      <span class="lbl" style="color:#fff">Kontakt</span>
+      <h2>Lassen<br>Sie uns<br>reden.</h2>
+      <p class="sub">Erzählen Sie uns von Ihrer Marke. Wir melden uns innerhalb von 24 Stunden mit ersten Gedanken.</p>
+    </div>
+    <div class="reveal d1">
+      <form onsubmit="return sendForm(event,this)">
+        <div class="form-body">
+          <div class="field"><label>Name</label><input required placeholder="Ihr Name"></div>
+          <div class="field"><label>Unternehmen</label><input placeholder="Ihre Marke"></div>
+          <div class="field"><label>E-Mail</label><input required type="email" placeholder="name@firma.de"></div>
+          <div class="field"><label>Interesse</label><select><option>Positionierung</option><option>Markenstrategie</option><option>Naming & Identity</option><option>Go-to-Market</option><option>Wachstumsberatung</option></select></div>
+          <button class="btn" style="width:100%;justify-content:center;background:#16150f;color:#fff" type="submit">Anfrage senden</button>
+          <div class="form-note">Demo-Formular · es werden keine Daten gesendet</div>
+        </div>
+        <div class="form-ok">
+          <h4>Danke!</h4>
+          <p>Ihre Anfrage ist eingegangen. Wir melden uns in Kürze mit ersten Ideen.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-in">
+    <div><b>Meridian</b> · Demo-Referenz · Strategieberatung · Linienstraße 60, 10115 Berlin</div>
+    <div>Erfundenes Beispielunternehmen · Kein reales Angebot</div>
+  </div>
+</footer>
+
+<a class="demo-badge" href="../index.html"><span class="dot"></span> Demo-Referenz · zur Übersicht</a>
+
+<script>
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  const cio=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){count(e.target);cio.unobserve(e.target)}})},{threshold:.6});
+  document.querySelectorAll('[data-count]').forEach(el=>cio.observe(el));
+  function count(el){const t=+el.dataset.count,dec=+(el.dataset.dec||0);let st=performance.now(),d=1600;
+    const v=el.querySelector('.v');
+    function tick(now){let p=Math.min((now-st)/d,1);p=1-Math.pow(1-p,3);let val=(t*p).toFixed(dec);
+      v.textContent=dec?val.replace('.',','):Math.round(t*p);if(p<1)requestAnimationFrame(tick)}requestAnimationFrame(tick)}
+  function sendForm(e,f){e.preventDefault();f.classList.add('sent');f.querySelector('.form-ok').classList.add('show');return false}
+</script>
+</body>
+</html>
