@@ -5,9 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nexa – Digitale Lösungen, die wachsen</title>
 <meta name="description" content="Nexa – Agentur für digitale Strategie, Design und Entwicklung. Wir bauen Produkte, die Ihr Unternehmen nach vorne bringen.">
+<meta name="theme-color" content="#0a0a14">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Nexa – Digitale Lösungen, die wachsen">
+<meta property="og:description" content="Nexa – Agentur für digitale Strategie, Design und Entwicklung. Wir bauen Produkte, die Ihr Unternehmen nach vorne bringen.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%237c5cff'/%3E%3Ctext x='16' y='22.5' font-family='Arial,sans-serif' font-weight='700' font-size='18' text-anchor='middle' fill='%23fff'%3EN%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<noscript><style>.reveal{opacity:1 !important;transform:none !important}</style></noscript>
 <style>
   :root{--bg:#0a0a14;--bg2:#0f1020;--glass:rgba(255,255,255,.05);--glass-b:rgba(255,255,255,.1);--ink:#f2f3fb;--muted:#9aa0c0;--vio:#7c5cff;--cyan:#22d3ee;--line:rgba(255,255,255,.08)}
   *{margin:0;padding:0;box-sizing:border-box}
@@ -17,7 +23,7 @@
   .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
   a{color:inherit;text-decoration:none}
   .grad-text{background:linear-gradient(100deg,var(--vio),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
-  .btn{display:inline-flex;align-items:center;gap:9px;background:linear-gradient(100deg,var(--vio),var(--cyan));color:#08080f;font-weight:600;padding:14px 26px;border-radius:12px;font-size:15px;border:none;cursor:pointer;font-family:'Space Grotesk';transition:transform .2s,box-shadow .2s}
+  .btn{display:inline-flex;align-items:center;gap:9px;background:linear-gradient(100deg,var(--vio),var(--cyan));color:#08080f;font-weight:600;padding:14px 26px;border-radius:12px;font-size:15px;border:none;cursor:pointer;font-family:'Space Grotesk',system-ui,sans-serif;transition:transform .2s,box-shadow .2s}
   .btn:hover{transform:translateY(-2px);box-shadow:0 14px 36px rgba(124,92,255,.4)}
   .btn.ghost{background:var(--glass);color:var(--ink);border:1px solid var(--glass-b);backdrop-filter:blur(8px)}
   .btn.ghost:hover{box-shadow:none;border-color:var(--cyan)}
@@ -26,9 +32,8 @@
   .nav-in{display:flex;align-items:center;justify-content:space-between;height:74px}
   .brand{display:flex;align-items:center;gap:11px;font-weight:700;font-size:22px;letter-spacing:-.01em}
   .nav-links{display:flex;gap:28px;align-items:center}
-  .nav-links a{color:var(--muted);font-size:15px;font-weight:500;transition:color .2s}
-  .nav-links a:hover{color:var(--ink)}
-  @media(max-width:840px){.nav-links a:not(.btn){display:none}}
+  .nav-links a:not(.btn){color:var(--muted);font-size:15px;font-weight:500;transition:color .2s}
+  .nav-links a:not(.btn):hover{color:var(--ink)}
 
   .blob{position:absolute;border-radius:50%;filter:blur(70px);z-index:0;opacity:.55;animation:blob 12s ease-in-out infinite}
   @keyframes blob{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(40px,-30px) scale(1.15)}66%{transform:translate(-30px,20px) scale(.9)}}
@@ -97,7 +102,7 @@
   .cta-box h2{font-size:clamp(30px,4.4vw,50px)}
   .cta-box p{color:var(--muted);margin:16px auto 30px;max-width:520px;font-size:17px}
   .email-form{display:flex;gap:12px;max-width:480px;margin:0 auto;position:relative;z-index:2}
-  .email-form input{flex:1;background:rgba(0,0,0,.3);border:1px solid var(--glass-b);border-radius:12px;padding:15px 18px;color:var(--ink);font-family:'Space Grotesk';font-size:15px}
+  .email-form input{flex:1;background:rgba(0,0,0,.3);border:1px solid var(--glass-b);border-radius:12px;padding:15px 18px;color:var(--ink);font-family:'Space Grotesk',system-ui,sans-serif;font-size:15px}
   .email-form input:focus{outline:none;border-color:var(--cyan)}
   .form-ok-inline{display:none;margin-top:18px;color:var(--cyan);font-weight:600}
   .form-ok-inline.show{display:block}
@@ -115,6 +120,26 @@
   .demo-badge{position:fixed;left:18px;bottom:18px;z-index:80;display:inline-flex;align-items:center;gap:8px;background:var(--glass);border:1px solid var(--glass-b);color:var(--ink);padding:9px 14px;border-radius:30px;font-size:12.5px;font-weight:600;backdrop-filter:blur(10px);transition:transform .2s}
   .demo-badge:hover{transform:translateY(-2px);border-color:var(--cyan)}
   .demo-badge .dot{width:8px;height:8px;border-radius:50%;background:var(--cyan);box-shadow:0 0 10px var(--cyan)}
+
+  /* === Verbesserungen: Mobile-Menü, Fokus, Reduced Motion === */
+  :root{--nav-bg:#0a0a14;--nav-ink:#f2f3fb;--nav-line:rgba(255,255,255,.08);--focus:#22d3ee}
+  .burger{display:none;width:44px;height:44px;border:0;background:transparent;cursor:pointer;flex-direction:column;justify-content:center;align-items:center;gap:5px;color:var(--nav-ink)}
+  .burger span{display:block;width:22px;height:2px;background:currentColor;border-radius:2px;transition:transform .3s,opacity .3s}
+  .burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+  .burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  @media(max-width:840px){
+    .burger{display:flex}
+    .brand{white-space:nowrap}
+    .nav-links{position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;padding:8px 20px 20px;background:var(--nav-bg);border-bottom:1px solid var(--nav-line);box-shadow:0 20px 40px rgba(0,0,0,.18);opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .25s,transform .25s,visibility .25s}
+    .nav-links.open{opacity:1;visibility:visible;transform:none}
+    .nav-links a:not(.btn){display:block !important;padding:14px 4px;border-bottom:1px solid var(--nav-line);font-size:17px;color:var(--nav-ink)}
+    .nav-links a.btn{margin-top:14px;justify-content:center}
+  }
+  button,input,select,textarea{font-family:inherit}
+  a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--focus);outline-offset:3px}
+  .legal a{text-decoration:underline;text-underline-offset:3px}
+  @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important}.reveal{opacity:1 !important;transform:none !important}}
 </style>
 </head>
 <body>
@@ -125,12 +150,13 @@
       <svg width="34" height="34" viewBox="0 0 40 40"><defs><linearGradient id="ng" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c5cff"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs><rect width="40" height="40" rx="11" fill="url(#ng)"/><path d="M12 28V12l16 16V12" stroke="#08080f" stroke-width="3.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
       Nexa
     </a>
-    <nav class="nav-links">
+    <nav class="nav-links" id="menu" aria-label="Hauptnavigation">
       <a href="#leistungen">Leistungen</a>
       <a href="#warum">Warum Nexa</a>
       <a href="#stimmen">Referenzen</a>
       <a href="#kontakt" class="btn">Projekt starten</a>
     </nav>
+    <button class="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
   </div>
 </header>
 
@@ -164,12 +190,12 @@
       <p>Sechs Kompetenzen, die nahtlos ineinandergreifen – kein Chaos aus vielen Dienstleistern.</p>
     </div>
     <div class="grid3">
-      <div class="card reveal"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10M12 2v10l7 7"/></svg></div><h3>Strategie</h3><p>Wir analysieren Markt, Zielgruppe und Ziele – und bauen daraus einen klaren Fahrplan.</p></div>
-      <div class="card reveal d1"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 21V9"/></svg></div><h3>UX / UI Design</h3><p>Interfaces, die intuitiv wirken und begeistern – vom Wireframe bis zum Prototyp.</p></div>
-      <div class="card reveal d2"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></svg></div><h3>Entwicklung</h3><p>Performante Websites und Web-Apps mit modernem Stack – skalierbar und wartbar.</p></div>
-      <div class="card reveal"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2"><path d="M3 17l6-6 4 4 8-8M21 7v6h-6"/></svg></div><h3>Growth Marketing</h3><p>SEO, Ads und Funnels, die aus Besuchern echte Kunden machen.</p></div>
-      <div class="card reveal d1"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18M3 12h18"/></svg></div><h3>Branding</h3><p>Marken mit Haltung – Logo, Farbwelt und Sprache aus einem Guss.</p></div>
-      <div class="card reveal d2"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2"><path d="M4 4h16v12H4z M2 20h20M9 20v-4M15 20v-4"/></svg></div><h3>Support & Betrieb</h3><p>Wir bleiben an Bord: Hosting, Updates und laufende Optimierung.</p></div>
+      <div class="card reveal"><div class="ic"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10M12 2v10l7 7"/></svg></div><h3>Strategie</h3><p>Wir analysieren Markt, Zielgruppe und Ziele – und bauen daraus einen klaren Fahrplan.</p></div>
+      <div class="card reveal d1"><div class="ic"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 21V9"/></svg></div><h3>UX / UI Design</h3><p>Interfaces, die intuitiv wirken und begeistern – vom Wireframe bis zum Prototyp.</p></div>
+      <div class="card reveal d2"><div class="ic"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></svg></div><h3>Entwicklung</h3><p>Performante Websites und Web-Apps mit modernem Stack – skalierbar und wartbar.</p></div>
+      <div class="card reveal"><div class="ic"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2"><path d="M3 17l6-6 4 4 8-8M21 7v6h-6"/></svg></div><h3>Growth Marketing</h3><p>SEO, Ads und Funnels, die aus Besuchern echte Kunden machen.</p></div>
+      <div class="card reveal d1"><div class="ic"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18M3 12h18"/></svg></div><h3>Branding</h3><p>Marken mit Haltung – Logo, Farbwelt und Sprache aus einem Guss.</p></div>
+      <div class="card reveal d2"><div class="ic"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2"><path d="M4 4h16v12H4z M2 20h20M9 20v-4M15 20v-4"/></svg></div><h3>Support & Betrieb</h3><p>Wir bleiben an Bord: Hosting, Updates und laufende Optimierung.</p></div>
     </div>
   </div>
 </section>
@@ -180,9 +206,9 @@
       <span class="pill"><span class="d"></span> Warum Nexa</span>
       <h2 style="margin-top:16px;font-size:clamp(30px,4vw,44px)">Wir liefern nicht nur schön – wir liefern <span class="grad-text">Ergebnisse</span>.</h2>
       <div class="why-list">
-        <div class="why-item"><span class="ck"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#08080f" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg></span><div><h4>Datengetrieben</h4><p>Jede Entscheidung ist mit Zahlen belegt – kein Bauchgefühl, sondern Wirkung.</p></div></div>
-        <div class="why-item"><span class="ck"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#08080f" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg></span><div><h4>Ein festes Team</h4><p>Dieselben Ansprechpartner vom Kickoff bis zum Launch – volle Verantwortung.</p></div></div>
-        <div class="why-item"><span class="ck"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#08080f" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg></span><div><h4>Transparente Preise</h4><p>Klare Pakete, feste Budgets, keine versteckten Kosten.</p></div></div>
+        <div class="why-item"><span class="ck"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#08080f" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg></span><div><h4>Datengetrieben</h4><p>Jede Entscheidung ist mit Zahlen belegt – kein Bauchgefühl, sondern Wirkung.</p></div></div>
+        <div class="why-item"><span class="ck"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#08080f" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg></span><div><h4>Ein festes Team</h4><p>Dieselben Ansprechpartner vom Kickoff bis zum Launch – volle Verantwortung.</p></div></div>
+        <div class="why-item"><span class="ck"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#08080f" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg></span><div><h4>Transparente Preise</h4><p>Klare Pakete, feste Budgets, keine versteckten Kosten.</p></div></div>
       </div>
     </div>
     <div class="chart reveal d1">
@@ -206,9 +232,9 @@
       <h2>Marken, die mit uns gewachsen sind</h2>
     </div>
     <div class="grid3">
-      <div class="quote reveal"><div class="stars">★★★★★</div><p>„Nexa hat unseren Onlineshop komplett neu gedacht. Ergebnis: 3× mehr Umsatz in sechs Monaten.“</p><div class="who"><svg class="av" viewBox="0 0 44 44"><defs><linearGradient id="a1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c5cff"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs><circle cx="22" cy="22" r="22" fill="url(#a1)"/><text x="22" y="29" text-anchor="middle" font-family="Space Grotesk" font-weight="700" font-size="15" fill="#08080f">LR</text></svg><div><b>Lisa Reimann</b><span>CEO, Vello Shop</span></div></div></div>
-      <div class="quote reveal d1"><div class="stars">★★★★★</div><p>„Endlich eine Agentur, die mitdenkt und liefert. Die Zusammenarbeit war einfach mühelos.“</p><div class="who"><svg class="av" viewBox="0 0 44 44"><circle cx="22" cy="22" r="22" fill="url(#a1)"/><text x="22" y="29" text-anchor="middle" font-family="Space Grotesk" font-weight="700" font-size="15" fill="#08080f">TK</text></svg><div><b>Tobias Krause</b><span>Gründer, Finlytic</span></div></div></div>
-      <div class="quote reveal d2"><div class="stars">★★★★★</div><p>„Vom Branding bis zur App alles aus einer Hand – und jedes Detail hat gesessen.“</p><div class="who"><svg class="av" viewBox="0 0 44 44"><circle cx="22" cy="22" r="22" fill="url(#a1)"/><text x="22" y="29" text-anchor="middle" font-family="Space Grotesk" font-weight="700" font-size="15" fill="#08080f">MN</text></svg><div><b>Mara Novak</b><span>CMO, Pulse Health</span></div></div></div>
+      <div class="quote reveal"><div class="stars">★★★★★</div><p>„Nexa hat unseren Onlineshop komplett neu gedacht. Ergebnis: 3× mehr Umsatz in sechs Monaten.“</p><div class="who"><svg class="av" viewBox="0 0 44 44"><defs><linearGradient id="a1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c5cff"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs><circle cx="22" cy="22" r="22" fill="url(#a1)"/><text x="22" y="29" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-weight="700" font-size="15" fill="#08080f">LR</text></svg><div><b>Lisa Reimann</b><span>CEO, Vello Shop</span></div></div></div>
+      <div class="quote reveal d1"><div class="stars">★★★★★</div><p>„Endlich eine Agentur, die mitdenkt und liefert. Die Zusammenarbeit war einfach mühelos.“</p><div class="who"><svg class="av" viewBox="0 0 44 44"><circle cx="22" cy="22" r="22" fill="url(#a1)"/><text x="22" y="29" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-weight="700" font-size="15" fill="#08080f">TK</text></svg><div><b>Tobias Krause</b><span>Gründer, Finlytic</span></div></div></div>
+      <div class="quote reveal d2"><div class="stars">★★★★★</div><p>„Vom Branding bis zur App alles aus einer Hand – und jedes Detail hat gesessen.“</p><div class="who"><svg class="av" viewBox="0 0 44 44"><circle cx="22" cy="22" r="22" fill="url(#a1)"/><text x="22" y="29" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-weight="700" font-size="15" fill="#08080f">MN</text></svg><div><b>Mara Novak</b><span>CMO, Pulse Health</span></div></div></div>
     </div>
   </div>
 </section>
@@ -233,23 +259,49 @@
 <footer>
   <div class="wrap foot-in">
     <div><b>Nexa</b> · Demo-Referenz · Digitalagentur · Torstraße 40, 10119 Berlin</div>
-    <div>Erfundenes Beispielunternehmen · Kein reales Angebot</div>
+    <div class="legal">Erfundenes Beispielunternehmen · Kein reales Angebot · <a href="#impressum">Impressum</a> · <a href="#datenschutz">Datenschutz</a></div>
   </div>
 </footer>
 
 <a class="demo-badge" href="../index.html"><span class="dot"></span> Demo-Referenz · zur Übersicht</a>
 
 <script>
-  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.14});
-  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-  const cio=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){count(e.target);cio.unobserve(e.target)}})},{threshold:.6});
+(function(){
+  const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // Scroll-Reveal
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal:not(.in)').forEach(el=>io.observe(el));
+  // Zähler (deutsches Zahlenformat: 1.200 / 4,9)
+  const fmt=(v,d)=>v.toLocaleString('de-DE',{minimumFractionDigits:d,maximumFractionDigits:d});
+  function count(el){const t=parseFloat(el.dataset.count),d=+(el.dataset.dec||0),suf=el.dataset.suffix||'',tg=el.querySelector('.v')||el,st=performance.now(),dur=1600;
+    (function tick(now){let p=reduce?1:Math.min((now-st)/dur,1);p=1-Math.pow(1-p,3);tg.textContent=fmt(t*p,d)+(tg===el?suf:'');if(p<1)requestAnimationFrame(tick)})(st)}
+  const cio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){count(e.target);cio.unobserve(e.target)}}),{threshold:.5});
   document.querySelectorAll('[data-count]').forEach(el=>cio.observe(el));
-  function count(el){const t=+el.dataset.count,dec=+(el.dataset.dec||0),suf=el.dataset.suffix||'';let st=performance.now(),d=1500;
-    function tick(now){let p=Math.min((now-st)/d,1);p=1-Math.pow(1-p,3);let v=(t*p).toFixed(dec);
-      el.textContent=(dec?v.replace('.',','):Math.round(t*p))+suf;if(p<1)requestAnimationFrame(tick)}requestAnimationFrame(tick)}
-  const bio=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){document.getElementById('bars').classList.add('go');bio.unobserve(e.target)}})},{threshold:.4});
-  bio.observe(document.getElementById('bars'));
-  function sendForm(e,f){e.preventDefault();f.classList.add('sent');f.querySelector('.form-ok-inline').classList.add('show');return false}
+  // Mobile-Menü
+  const b=document.querySelector('.burger'),n=document.querySelector('.nav-links');
+  if(b&&n){const close=()=>{n.classList.remove('open');b.setAttribute('aria-expanded','false');b.setAttribute('aria-label','Menü öffnen')};
+    b.addEventListener('click',()=>{const o=n.classList.toggle('open');b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Menü schließen':'Menü öffnen')});
+    n.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));document.addEventListener('keydown',e=>{if(e.key==='Escape')close()})}
+  // Formular-Labels mit Feldern verknüpfen (Barrierefreiheit)
+  document.querySelectorAll('.field').forEach((f,i)=>{const l=f.querySelector('label'),c=f.querySelector('input,select,textarea');if(l&&c){c.id=c.id||'feld-'+i;l.htmlFor=c.id}});
+  document.querySelectorAll('input:not([id])').forEach(c=>{if(c.placeholder)c.setAttribute('aria-label',c.placeholder)});
+  // Animiertes Balkendiagramm
+  const bars=document.getElementById('bars');
+  if(bars){const bio=new IntersectionObserver(es=>{if(es[0].isIntersecting){bars.classList.add('go');bio.disconnect()}},{threshold:.4});bio.observe(bars)}
+  // Vorher/Nachher-Slider: Maus, Touch, Tastatur + kurzer Hinweis-Schwung
+  const ba=document.getElementById('ba');
+  if(ba){const after=ba.querySelector('.after'),h=document.getElementById('baHandle');let drag=false,touched=false,pos=50;
+    const set=p=>{pos=Math.max(0,Math.min(100,p));after.style.clipPath='inset(0 0 0 '+pos+'%)';h.style.left=pos+'%';ba.setAttribute('aria-valuenow',Math.round(pos))};
+    const fromX=x=>{const r=ba.getBoundingClientRect();set((x-r.left)/r.width*100)};
+    ba.addEventListener('pointerdown',e=>{drag=touched=true;ba.setPointerCapture(e.pointerId);fromX(e.clientX)});
+    ba.addEventListener('pointermove',e=>{if(drag)fromX(e.clientX)});
+    ['pointerup','pointercancel'].forEach(t=>ba.addEventListener(t,()=>drag=false));
+    ba.addEventListener('keydown',e=>{const k={ArrowLeft:-5,ArrowRight:5,Home:-100,End:100}[e.key];if(k!==undefined){touched=true;set(pos+k);e.preventDefault()}});
+    const hio=new IntersectionObserver(es=>{if(!es[0].isIntersecting)return;hio.disconnect();if(reduce)return;const st=performance.now();
+      (function a(now){const t=(now-st)/1800;if(touched)return;if(t>=1){set(50);return}set(50+Math.sin(t*Math.PI*2)*20);requestAnimationFrame(a)})(st)},{threshold:.6});
+    hio.observe(ba)}
+})();
+function sendForm(e,f){e.preventDefault();f.classList.add('sent');const ok=f.querySelector('.form-ok,.form-ok-inline');ok.classList.add('show');ok.setAttribute('role','status');ok.setAttribute('tabindex','-1');ok.focus({preventScroll:true});return false}
 </script>
 </body>
 </html>

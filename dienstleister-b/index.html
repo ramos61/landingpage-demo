@@ -5,9 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Meridian – Beratung für ambitionierte Marken</title>
 <meta name="description" content="Meridian – Strategieberatung für Marken mit Anspruch. Klarheit, Positionierung und Wachstum, editorial gedacht.">
+<meta name="theme-color" content="#f4f3ef">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Meridian – Beratung für ambitionierte Marken">
+<meta property="og:description" content="Meridian – Strategieberatung für Marken mit Anspruch. Klarheit, Positionierung und Wachstum, editorial gedacht.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23ff4d2e'/%3E%3Ctext x='16' y='22.5' font-family='Arial,sans-serif' font-weight='700' font-size='18' text-anchor='middle' fill='%23fff'%3EM%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<noscript><style>.reveal{opacity:1 !important;transform:none !important}</style></noscript>
 <style>
   :root{--bg:#f4f3ef;--paper:#faf9f6;--ink:#16150f;--muted:#6a685e;--coral:#ff4d2e;--line:#dedcd2}
   *{margin:0;padding:0;box-sizing:border-box}
@@ -16,7 +22,7 @@
   h1,h2,h3{font-weight:800;line-height:1;letter-spacing:-.03em}
   .wrap{max-width:1200px;margin:0 auto;padding:0 32px}
   a{color:inherit;text-decoration:none}
-  .btn{display:inline-flex;align-items:center;gap:9px;background:var(--ink);color:var(--bg);font-weight:600;padding:15px 30px;border-radius:0;font-size:15px;border:none;cursor:pointer;font-family:'Archivo';transition:background .2s,transform .2s}
+  .btn{display:inline-flex;align-items:center;gap:9px;background:var(--ink);color:var(--bg);font-weight:600;padding:15px 30px;border-radius:0;font-size:15px;border:none;cursor:pointer;font-family:'Archivo',system-ui,sans-serif;transition:background .2s,transform .2s}
   .btn:hover{background:var(--coral);transform:translateY(-2px)}
   .btn.coral{background:var(--coral);color:#fff}
   .btn.coral:hover{background:var(--ink)}
@@ -28,9 +34,8 @@
   .brand{font-weight:900;font-size:24px;letter-spacing:-.04em}
   .brand span{color:var(--coral)}
   .nav-links{display:flex;gap:32px;align-items:center}
-  .nav-links a{color:var(--ink);font-size:15px;font-weight:500;transition:color .2s}
-  .nav-links a:hover{color:var(--coral)}
-  @media(max-width:840px){.nav-links a:not(.btn){display:none}}
+  .nav-links a:not(.btn){color:var(--ink);font-size:15px;font-weight:500;transition:color .2s}
+  .nav-links a:not(.btn):hover{color:var(--coral)}
 
   /* HERO big typo */
   .hero{padding:70px 0 40px}
@@ -105,7 +110,7 @@
   .contact p.sub{font-size:18px;margin-top:20px;max-width:400px;opacity:.9}
   .field{margin-bottom:16px}
   .field label{display:block;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;font-weight:700;margin-bottom:7px}
-  .field input,.field select,.field textarea{width:100%;background:rgba(255,255,255,.14);border:1.5px solid rgba(255,255,255,.4);border-radius:0;padding:14px 16px;color:#fff;font-family:'Archivo';font-size:15px}
+  .field input,.field select,.field textarea{width:100%;background:rgba(255,255,255,.14);border:1.5px solid rgba(255,255,255,.4);border-radius:0;padding:14px 16px;color:#fff;font-family:'Archivo',system-ui,sans-serif;font-size:15px}
   .field input::placeholder,.field textarea::placeholder{color:rgba(255,255,255,.6)}
   .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:#fff;background:rgba(255,255,255,.22)}
   .field select{color:#fff}.field select option{color:#16150f}
@@ -127,6 +132,26 @@
   .demo-badge:hover{transform:translateY(-2px);background:var(--coral)}
   .demo-badge .dot{width:8px;height:8px;border-radius:50%;background:var(--coral)}
   .demo-badge:hover .dot{background:#fff}
+
+  /* === Verbesserungen: Mobile-Menü, Fokus, Reduced Motion === */
+  :root{--nav-bg:#f4f3ef;--nav-ink:#16150f;--nav-line:#dedcd2;--focus:#ff4d2e}
+  .burger{display:none;width:44px;height:44px;border:0;background:transparent;cursor:pointer;flex-direction:column;justify-content:center;align-items:center;gap:5px;color:var(--nav-ink)}
+  .burger span{display:block;width:22px;height:2px;background:currentColor;border-radius:2px;transition:transform .3s,opacity .3s}
+  .burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+  .burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  @media(max-width:840px){
+    .burger{display:flex}
+    .brand{white-space:nowrap}
+    .nav-links{position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;padding:8px 20px 20px;background:var(--nav-bg);border-bottom:1px solid var(--nav-line);box-shadow:0 20px 40px rgba(0,0,0,.18);opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .25s,transform .25s,visibility .25s}
+    .nav-links.open{opacity:1;visibility:visible;transform:none}
+    .nav-links a:not(.btn){display:block !important;padding:14px 4px;border-bottom:1px solid var(--nav-line);font-size:17px;color:var(--nav-ink)}
+    .nav-links a.btn{margin-top:14px;justify-content:center}
+  }
+  button,input,select,textarea{font-family:inherit}
+  a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--focus);outline-offset:3px}
+  .legal a{text-decoration:underline;text-underline-offset:3px}
+  @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important}.reveal{opacity:1 !important;transform:none !important}}
 </style>
 </head>
 <body>
@@ -134,12 +159,13 @@
 <header class="nav">
   <div class="wrap nav-in">
     <a class="brand" href="#top">Meridian<span>.</span></a>
-    <nav class="nav-links">
+    <nav class="nav-links" id="menu" aria-label="Hauptnavigation">
       <a href="#leistungen">Leistungen</a>
       <a href="#ansatz">Ansatz</a>
       <a href="#zahlen">Zahlen</a>
       <a href="#kontakt" class="btn">Anfragen</a>
     </nav>
+    <button class="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
   </div>
 </header>
 
@@ -259,22 +285,49 @@
 <footer>
   <div class="wrap foot-in">
     <div><b>Meridian</b> · Demo-Referenz · Strategieberatung · Linienstraße 60, 10115 Berlin</div>
-    <div>Erfundenes Beispielunternehmen · Kein reales Angebot</div>
+    <div class="legal">Erfundenes Beispielunternehmen · Kein reales Angebot · <a href="#impressum">Impressum</a> · <a href="#datenschutz">Datenschutz</a></div>
   </div>
 </footer>
 
 <a class="demo-badge" href="../index.html"><span class="dot"></span> Demo-Referenz · zur Übersicht</a>
 
 <script>
-  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
-  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-  const cio=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){count(e.target);cio.unobserve(e.target)}})},{threshold:.6});
+(function(){
+  const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // Scroll-Reveal
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal:not(.in)').forEach(el=>io.observe(el));
+  // Zähler (deutsches Zahlenformat: 1.200 / 4,9)
+  const fmt=(v,d)=>v.toLocaleString('de-DE',{minimumFractionDigits:d,maximumFractionDigits:d});
+  function count(el){const t=parseFloat(el.dataset.count),d=+(el.dataset.dec||0),suf=el.dataset.suffix||'',tg=el.querySelector('.v')||el,st=performance.now(),dur=1600;
+    (function tick(now){let p=reduce?1:Math.min((now-st)/dur,1);p=1-Math.pow(1-p,3);tg.textContent=fmt(t*p,d)+(tg===el?suf:'');if(p<1)requestAnimationFrame(tick)})(st)}
+  const cio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){count(e.target);cio.unobserve(e.target)}}),{threshold:.5});
   document.querySelectorAll('[data-count]').forEach(el=>cio.observe(el));
-  function count(el){const t=+el.dataset.count,dec=+(el.dataset.dec||0);let st=performance.now(),d=1600;
-    const v=el.querySelector('.v');
-    function tick(now){let p=Math.min((now-st)/d,1);p=1-Math.pow(1-p,3);let val=(t*p).toFixed(dec);
-      v.textContent=dec?val.replace('.',','):Math.round(t*p);if(p<1)requestAnimationFrame(tick)}requestAnimationFrame(tick)}
-  function sendForm(e,f){e.preventDefault();f.classList.add('sent');f.querySelector('.form-ok').classList.add('show');return false}
+  // Mobile-Menü
+  const b=document.querySelector('.burger'),n=document.querySelector('.nav-links');
+  if(b&&n){const close=()=>{n.classList.remove('open');b.setAttribute('aria-expanded','false');b.setAttribute('aria-label','Menü öffnen')};
+    b.addEventListener('click',()=>{const o=n.classList.toggle('open');b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Menü schließen':'Menü öffnen')});
+    n.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));document.addEventListener('keydown',e=>{if(e.key==='Escape')close()})}
+  // Formular-Labels mit Feldern verknüpfen (Barrierefreiheit)
+  document.querySelectorAll('.field').forEach((f,i)=>{const l=f.querySelector('label'),c=f.querySelector('input,select,textarea');if(l&&c){c.id=c.id||'feld-'+i;l.htmlFor=c.id}});
+  document.querySelectorAll('input:not([id])').forEach(c=>{if(c.placeholder)c.setAttribute('aria-label',c.placeholder)});
+  // Animiertes Balkendiagramm
+  const bars=document.getElementById('bars');
+  if(bars){const bio=new IntersectionObserver(es=>{if(es[0].isIntersecting){bars.classList.add('go');bio.disconnect()}},{threshold:.4});bio.observe(bars)}
+  // Vorher/Nachher-Slider: Maus, Touch, Tastatur + kurzer Hinweis-Schwung
+  const ba=document.getElementById('ba');
+  if(ba){const after=ba.querySelector('.after'),h=document.getElementById('baHandle');let drag=false,touched=false,pos=50;
+    const set=p=>{pos=Math.max(0,Math.min(100,p));after.style.clipPath='inset(0 0 0 '+pos+'%)';h.style.left=pos+'%';ba.setAttribute('aria-valuenow',Math.round(pos))};
+    const fromX=x=>{const r=ba.getBoundingClientRect();set((x-r.left)/r.width*100)};
+    ba.addEventListener('pointerdown',e=>{drag=touched=true;ba.setPointerCapture(e.pointerId);fromX(e.clientX)});
+    ba.addEventListener('pointermove',e=>{if(drag)fromX(e.clientX)});
+    ['pointerup','pointercancel'].forEach(t=>ba.addEventListener(t,()=>drag=false));
+    ba.addEventListener('keydown',e=>{const k={ArrowLeft:-5,ArrowRight:5,Home:-100,End:100}[e.key];if(k!==undefined){touched=true;set(pos+k);e.preventDefault()}});
+    const hio=new IntersectionObserver(es=>{if(!es[0].isIntersecting)return;hio.disconnect();if(reduce)return;const st=performance.now();
+      (function a(now){const t=(now-st)/1800;if(touched)return;if(t>=1){set(50);return}set(50+Math.sin(t*Math.PI*2)*20);requestAnimationFrame(a)})(st)},{threshold:.6});
+    hio.observe(ba)}
+})();
+function sendForm(e,f){e.preventDefault();f.classList.add('sent');const ok=f.querySelector('.form-ok,.form-ok-inline');ok.classList.add('show');ok.setAttribute('role','status');ok.setAttribute('tabindex','-1');ok.focus({preventScroll:true});return false}
 </script>
 </body>
 </html>

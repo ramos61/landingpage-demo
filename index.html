@@ -5,9 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Referenz-Landingpages – Webdesign, das Kunden gewinnt</title>
 <meta name="description" content="Portfolio animierter Demo-Landingpages für Handwerk, Praxen und Dienstleister. Jede Seite ein eigener Stil – gebaut, um Kunden zu gewinnen.">
+<meta name="theme-color" content="#0a0a14">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Referenz-Landingpages – Webdesign, das Kunden gewinnt">
+<meta property="og:description" content="Portfolio animierter Demo-Landingpages für Handwerk, Praxen und Dienstleister. Jede Seite ein eigener Stil – gebaut, um Kunden zu gewinnen.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%237c5cff'/%3E%3Ctext x='16' y='22.5' font-family='Arial,sans-serif' font-weight='700' font-size='18' text-anchor='middle' fill='%23fff'%3ER%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<noscript><style>.reveal{opacity:1 !important;transform:none !important}</style></noscript>
 <style>
   :root{--bg:#0a0a14;--bg2:#0f1020;--glass:rgba(255,255,255,.05);--glass-b:rgba(255,255,255,.1);--ink:#f2f3fb;--muted:#9aa0c0;--vio:#7c5cff;--cyan:#22d3ee;--line:rgba(255,255,255,.08)}
   *{margin:0;padding:0;box-sizing:border-box}
@@ -17,7 +23,7 @@
   .wrap{max-width:1200px;margin:0 auto;padding:0 24px}
   a{color:inherit;text-decoration:none}
   .grad-text{background:linear-gradient(100deg,var(--vio),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
-  .btn{display:inline-flex;align-items:center;gap:9px;background:linear-gradient(100deg,var(--vio),var(--cyan));color:#08080f;font-weight:600;padding:14px 26px;border-radius:12px;font-size:15px;border:none;cursor:pointer;font-family:'Space Grotesk';transition:transform .2s,box-shadow .2s}
+  .btn{display:inline-flex;align-items:center;gap:9px;background:linear-gradient(100deg,var(--vio),var(--cyan));color:#08080f;font-weight:600;padding:14px 26px;border-radius:12px;font-size:15px;border:none;cursor:pointer;font-family:'Space Grotesk',system-ui,sans-serif;transition:transform .2s,box-shadow .2s}
   .btn:hover{transform:translateY(-2px);box-shadow:0 14px 36px rgba(124,92,255,.4)}
   .btn.ghost{background:var(--glass);color:var(--ink);border:1px solid var(--glass-b)}
   .btn.ghost:hover{border-color:var(--cyan)}
@@ -26,9 +32,8 @@
   .nav-in{display:flex;align-items:center;justify-content:space-between;height:74px}
   .brand{display:flex;align-items:center;gap:11px;font-weight:700;font-size:20px}
   .nav-links{display:flex;gap:26px;align-items:center}
-  .nav-links a{color:var(--muted);font-size:15px;font-weight:500;transition:color .2s}
-  .nav-links a:hover{color:var(--ink)}
-  @media(max-width:840px){.nav-links a:not(.btn){display:none}}
+  .nav-links a:not(.btn){color:var(--muted);font-size:15px;font-weight:500;transition:color .2s}
+  .nav-links a:not(.btn):hover{color:var(--ink)}
 
   .blob{position:absolute;border-radius:50%;filter:blur(80px);z-index:0;opacity:.5;animation:blob 13s ease-in-out infinite}
   @keyframes blob{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(50px,-30px) scale(1.15)}66%{transform:translate(-30px,20px) scale(.9)}}
@@ -99,6 +104,26 @@
   @keyframes grow{from{transform:scaleY(.7)}to{transform:scaleY(1)}}
   .spin{transform-origin:center;animation:spin 16s linear infinite}
   @keyframes spin{to{transform:rotate(360deg)}}
+
+  /* === Verbesserungen: Mobile-Menü, Fokus, Reduced Motion === */
+  :root{--nav-bg:#0a0a14;--nav-ink:#f2f3fb;--nav-line:rgba(255,255,255,.08);--focus:#22d3ee}
+  .burger{display:none;width:44px;height:44px;border:0;background:transparent;cursor:pointer;flex-direction:column;justify-content:center;align-items:center;gap:5px;color:var(--nav-ink)}
+  .burger span{display:block;width:22px;height:2px;background:currentColor;border-radius:2px;transition:transform .3s,opacity .3s}
+  .burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+  .burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  @media(max-width:840px){
+    .burger{display:flex}
+    .brand{white-space:nowrap}
+    .nav-links{position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;padding:8px 20px 20px;background:var(--nav-bg);border-bottom:1px solid var(--nav-line);box-shadow:0 20px 40px rgba(0,0,0,.18);opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .25s,transform .25s,visibility .25s}
+    .nav-links.open{opacity:1;visibility:visible;transform:none}
+    .nav-links a:not(.btn){display:block !important;padding:14px 4px;border-bottom:1px solid var(--nav-line);font-size:17px;color:var(--nav-ink)}
+    .nav-links a.btn{margin-top:14px;justify-content:center}
+  }
+  button,input,select,textarea{font-family:inherit}
+  a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--focus);outline-offset:3px}
+  .legal a{text-decoration:underline;text-underline-offset:3px}
+  @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important}.reveal{opacity:1 !important;transform:none !important}}
 </style>
 </head>
 <body>
@@ -109,12 +134,14 @@
       <svg width="32" height="32" viewBox="0 0 40 40"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c5cff"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs><rect width="40" height="40" rx="11" fill="url(#lg)"/><path d="M11 27l6-14 3 8 3-8 6 14" stroke="#08080f" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
       Studio · Referenzen
     </a>
-    <nav class="nav-links">
+    <nav class="nav-links" id="menu" aria-label="Hauptnavigation">
       <a href="#handwerk">Handwerk</a>
       <a href="#praxen">Praxen</a>
       <a href="#dienstleister">Dienstleister</a>
+      <a href="#gastro">Gastronomie</a>
       <a href="#kontakt" class="btn">Projekt anfragen</a>
     </nav>
+    <button class="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
   </div>
 </header>
 
@@ -123,16 +150,16 @@
   <div class="blob" style="width:400px;height:400px;background:#22d3ee;top:20px;right:4%;animation-delay:3s"></div>
   <div class="wrap">
     <div class="hero-in reveal in">
-      <span class="pill"><span class="d"></span> Portfolio · 6 animierte Demo-Seiten</span>
+      <span class="pill"><span class="d"></span> Portfolio · 7 animierte Demo-Seiten</span>
       <h1>Webseiten, die <span class="grad-text">begeistern</span> und Kunden gewinnen.</h1>
-      <p class="lead">Sechs Referenz-Landingpages für drei Branchen – jede in einem eigenen Stil. Klicken Sie sich durch und sehen Sie, was für Ihr Business möglich ist.</p>
+      <p class="lead">Sieben Referenz-Landingpages für vier Branchen – jede in einem eigenen Stil. Klicken Sie sich durch und sehen Sie, was für Ihr Business möglich ist.</p>
       <div class="hero-cta">
         <a href="#handwerk" class="btn">Demos ansehen</a>
         <a href="#kontakt" class="btn ghost">Eigene Seite anfragen</a>
       </div>
       <div class="hero-meta">
-        <div><b>3</b> Branchen</div>
-        <div><b>6</b> Design-Stile</div>
+        <div><b>4</b> Branchen</div>
+        <div><b>7</b> Design-Stile</div>
         <div><b>100 %</b> individuell</div>
         <div><b>Mobil</b> optimiert</div>
       </div>
@@ -160,7 +187,7 @@
             <text x="30" y="80" font-family="Oswald,sans-serif" font-size="34" font-weight="700" fill="#f4f5f7" letter-spacing="1">MEISTERBAU</text>
             <text x="30" y="112" font-family="Oswald,sans-serif" font-size="34" font-weight="700" fill="#ff7a18" letter-spacing="1">KRÜGER</text>
             <rect x="30" y="140" width="130" height="34" rx="5" fill="#ff7a18"/>
-            <text x="95" y="163" font-family="sans-serif" font-size="13" font-weight="700" fill="#111" text-anchor="middle">ANGEBOT</text>
+            <text x="95" y="163" font-family="sans-serif,sans-serif" font-size="13" font-weight="700" fill="#111" text-anchor="middle">ANGEBOT</text>
             <!-- crane -->
             <g class="flt"><rect x="300" y="70" width="6" height="150" fill="#ff7a18"/><rect x="240" y="70" width="120" height="6" fill="#ff7a18"/><line x1="330" y1="76" x2="330" y2="120" stroke="#a2a8b4" stroke-width="2"/><rect x="322" y="120" width="16" height="12" fill="#ffb066"/></g>
             <rect x="30" y="200" width="340" height="50" fill="#16181d"/>
@@ -169,7 +196,7 @@
         <div class="body">
           <div class="top"><h3>Meisterbau Krüger</h3><span class="tag">Dunkel · Industriell</span></div>
           <p>Oswald, Akzent-Orange, Vorher/Nachher-Slider und Angebots-Formular im Hero.</p>
-          <span class="go">Demo öffnen <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          <span class="go">Demo öffnen <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </div>
       </a>
       <a class="demo reveal d1" href="handwerk-b/index.html">
@@ -180,7 +207,7 @@
             <text x="30" y="112" font-family="Manrope,sans-serif" font-size="30" font-weight="800" fill="#1d4ed8">Bau</text>
             <rect x="28" y="128" width="120" height="14" rx="3" fill="#ffd21f"/>
             <rect x="30" y="158" width="110" height="32" rx="8" fill="#1d4ed8"/>
-            <text x="85" y="179" font-family="sans-serif" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">FESTPREIS</text>
+            <text x="85" y="179" font-family="sans-serif,sans-serif" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">FESTPREIS</text>
             <!-- house -->
             <g class="flt"><rect x="270" y="120" width="100" height="80" fill="#fff" stroke="#dde4f0" stroke-width="2"/><path d="M262 122l58-42 58 42z" fill="#1d4ed8"/><rect x="286" y="140" width="26" height="26" fill="#dfeaff" stroke="#1d4ed8"/><rect x="330" y="155" width="24" height="45" fill="#ffd21f"/></g>
           </svg>
@@ -188,7 +215,7 @@
         <div class="body">
           <div class="top"><h3>Schneider Bau</h3><span class="tag">Hell · Freundlich</span></div>
           <p>Manrope, Blau &amp; Signalgelb, schwebende Karten, 4-Schritte-Ablauf und Galerie.</p>
-          <span class="go">Demo öffnen <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          <span class="go">Demo öffnen <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </div>
       </a>
     </div>
@@ -214,7 +241,7 @@
             <text x="30" y="90" font-family="Poppins,sans-serif" font-size="30" font-weight="700" fill="#12343a">Praxis</text>
             <text x="30" y="126" font-family="Poppins,sans-serif" font-size="30" font-weight="700" fill="#0fb5ba">Dr. Sommer</text>
             <rect x="30" y="150" width="130" height="32" rx="16" fill="#0fb5ba"/>
-            <text x="95" y="171" font-family="sans-serif" font-size="12" font-weight="600" fill="#fff" text-anchor="middle">TERMIN BUCHEN</text>
+            <text x="95" y="171" font-family="sans-serif,sans-serif" font-size="12" font-weight="600" fill="#fff" text-anchor="middle">TERMIN BUCHEN</text>
             <!-- tooth -->
             <g class="flt"><path d="M300 80c-20 0-34 10-34 28 0 16 6 24 10 42 3 14 9 18 12 18s5-12 12-12 9 12 12 12 9-4 12-18c4-18 10-26 10-42 0-18-14-28-34-28z" fill="#fff" stroke="#cdeeed" stroke-width="2"/></g>
             <path d="M356 60l3 8 8 3-8 3-3 8-3-8-8-3 8-3z" fill="#0fb5ba" class="pulse"/>
@@ -223,7 +250,7 @@
         <div class="body">
           <div class="top"><h3>Praxis Dr. Sommer</h3><span class="tag">Türkis · Verspielt</span></div>
           <p>Poppins, schwebende Blobs, glänzender Zahn mit Funkeln, Team &amp; Online-Termin.</p>
-          <span class="go">Demo öffnen <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          <span class="go">Demo öffnen <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </div>
       </a>
       <a class="demo reveal d1" href="praxis-b/index.html">
@@ -234,7 +261,7 @@
             <text x="30" y="124" font-family="Fraunces,serif" font-size="30" font-style="italic" font-weight="500" fill="#1f4d3f">am Park</text>
             <line x1="30" y1="142" x2="70" y2="142" stroke="#c19a4b" stroke-width="2"/>
             <rect x="30" y="158" width="130" height="32" rx="3" fill="#1f4d3f"/>
-            <text x="95" y="179" font-family="sans-serif" font-size="12" font-weight="600" fill="#f6f1e7" text-anchor="middle">TERMIN</text>
+            <text x="95" y="179" font-family="sans-serif,sans-serif" font-size="12" font-weight="600" fill="#f6f1e7" text-anchor="middle">TERMIN</text>
             <!-- building + tree -->
             <g class="flt"><rect x="280" y="120" width="90" height="80" fill="#fbf8f1" stroke="#e0d8c6"/><path d="M272 122l53-34 53 34z" fill="#1f4d3f"/><rect x="315" y="150" width="22" height="50" fill="#1f4d3f"/></g>
             <path d="M256 200c-16-8-24-30-10-48 6 20 16 26 10 48z" fill="#3f7a5f" class="flt"/>
@@ -243,7 +270,7 @@
         <div class="body">
           <div class="top"><h3>Praxis am Park</h3><span class="tag">Creme · Premium</span></div>
           <p>Fraunces-Serifen, Naturgrün &amp; Gold, Philosophie-Abschnitt und grünes Zitat-Band.</p>
-          <span class="go">Demo öffnen <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          <span class="go">Demo öffnen <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </div>
       </a>
     </div>
@@ -268,7 +295,7 @@
             <circle class="pulse" cx="320" cy="70" r="80" fill="#7c5cff" opacity=".35" filter="url(#b)"/>
             <defs><filter id="b"><feGaussianBlur stdDeviation="20"/></filter><linearGradient id="dg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c5cff"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs>
             <text x="30" y="100" font-family="Space Grotesk,sans-serif" font-size="46" font-weight="700" fill="#f2f3fb">Nexa</text>
-            <text x="32" y="128" font-family="sans-serif" font-size="13" fill="#9aa0c0">Digitale Lösungen, die wachsen</text>
+            <text x="32" y="128" font-family="sans-serif,sans-serif" font-size="13" fill="#9aa0c0">Digitale Lösungen, die wachsen</text>
             <!-- glass bars -->
             <g class="flt"><rect x="240" y="150" width="40" height="60" rx="6" fill="url(#dg)" class="grow"/><rect x="290" y="130" width="40" height="80" rx="6" fill="url(#dg)" class="grow" opacity=".8"/><rect x="340" y="110" width="40" height="100" rx="6" fill="url(#dg)" class="grow"/></g>
           </svg>
@@ -276,7 +303,7 @@
         <div class="body">
           <div class="top"><h3>Nexa</h3><span class="tag">Dunkel · Glas</span></div>
           <p>Space Grotesk, Violett→Cyan, animierte Blobs, Glas-Statistikkarten &amp; Chart.</p>
-          <span class="go">Demo öffnen <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          <span class="go">Demo öffnen <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </div>
       </a>
       <a class="demo reveal d1" href="dienstleister-b/index.html">
@@ -294,7 +321,61 @@
         <div class="body">
           <div class="top"><h3>Meridian</h3><span class="tag">Hell · Editorial</span></div>
           <p>Archivo, Riesen-Typo, Korall-Akzent, nummerierte Leistungsliste &amp; rotierender Kreis.</p>
-          <span class="go">Demo öffnen <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          <span class="go">Demo öffnen <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- GASTRONOMIE -->
+<section class="sec" id="gastro">
+  <div class="wrap">
+    <div class="cat-head reveal">
+      <div>
+        <span class="lbl">04 — Branche</span>
+        <h2>Restaurant &amp; Gastronomie</h2>
+      </div>
+      <p>Appetit machen, Tische füllen: mit Speisekarte, Events und Online-Reservierung.</p>
+    </div>
+    <div class="cards2">
+      <a class="demo reveal" href="restaurant/index.html">
+        <div class="thumb" style="background:#fbf6ee">
+          <svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <rect width="400" height="250" fill="#fbf6ee"/>
+            <circle cx="320" cy="40" r="110" fill="#e0a33a" opacity=".15"/>
+            <text x="28" y="92" font-family="Playfair Display,serif" font-size="32" font-weight="700" fill="#2b2118">Osteria</text>
+            <text x="28" y="130" font-family="Playfair Display,serif" font-size="32" font-style="italic" font-weight="600" fill="#4a5a2c">Olivo</text>
+            <rect x="28" y="152" width="140" height="32" rx="16" fill="#d9432b"/>
+            <text x="98" y="173" font-family="sans-serif" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">TISCH RESERVIEREN</text>
+            <circle cx="300" cy="140" r="84" fill="#c8945a"/>
+            <g class="spin" style="transform-origin:300px 140px">
+              <circle cx="300" cy="140" r="70" fill="#f0c27b"/>
+              <circle cx="300" cy="140" r="58" fill="#d9432b"/>
+              <g fill="#fff8e8"><circle cx="282" cy="122" r="10"/><circle cx="318" cy="128" r="9"/><circle cx="296" cy="158" r="10"/><circle cx="322" cy="160" r="8"/></g>
+              <g fill="#3f7d2c"><ellipse cx="300" cy="136" rx="8" ry="4" transform="rotate(-30 300 136)"/><ellipse cx="276" cy="150" rx="8" ry="4" transform="rotate(40 276 150)"/><ellipse cx="326" cy="144" rx="8" ry="4" transform="rotate(100 326 144)"/></g>
+            </g>
+            <g class="pulse" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"><path d="M288 60c-6-8 6-14 0-22"/><path d="M308 56c-6-8 6-14 0-22"/></g>
+          </svg>
+        </div>
+        <div class="body">
+          <div class="top"><h3>Osteria Olivo</h3><span class="tag">Hell · Mediterran</span></div>
+          <p>Playfair Display, Olive &amp; Tomate, Speisekarte mit Tabs, Holzofen-Animation und Tisch-Reservierung.</p>
+          <span class="go">Demo öffnen <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+      <a class="demo reveal d1 wish" href="#kontakt">
+        <div class="thumb" style="background:linear-gradient(135deg,rgba(124,92,255,.18),rgba(34,211,238,.1))">
+          <svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <g fill="none" stroke="#7c5cff" stroke-width="2" stroke-dasharray="8 8" opacity=".7"><rect x="60" y="40" width="280" height="170" rx="18"/></g>
+            <g class="flt"><circle cx="200" cy="125" r="38" fill="url(#wg)"/><path d="M200 108v34M183 125h34" stroke="#08080f" stroke-width="5" stroke-linecap="round"/></g>
+            <defs><linearGradient id="wg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c5cff"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs>
+          </svg>
+        </div>
+        <div class="body">
+          <div class="top"><h3>Ihre Branche?</h3><span class="tag">Individuell</span></div>
+          <p>Friseur, Fitnessstudio, Kanzlei, Hotel … Ich baue Ihre Seite maßgeschneidert – im Stil, der zu Ihnen passt.</p>
+          <span class="go">Anfrage stellen <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </div>
       </a>
     </div>
@@ -309,12 +390,12 @@
       <p>Jede Referenz ist von Grund auf handgebaut – kein Baukasten, keine Vorlage.</p>
     </div>
     <div class="feat-grid">
-      <div class="feat reveal"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2"><path d="M12 3v18M5 10l7-7 7 7"/></svg></div><h3>Scroll-Animationen</h3><p>Inhalte erscheinen sanft beim Scrollen – die Seite fühlt sich lebendig an.</p></div>
-      <div class="feat reveal d1"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2"><path d="M4 20V8M10 20V4M16 20v-8M22 20H2"/></svg></div><h3>Hochzählende Zahlen</h3><p>Counter, die Erfolge und Kennzahlen wirkungsvoll in Szene setzen.</p></div>
-      <div class="feat reveal d2"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2"><path d="M9 3H4v5M15 3h5v5M9 21H4v-5M15 21h5v-5"/></svg></div><h3>Responsive Design</h3><p>Perfekt auf Smartphone, Tablet und Desktop – ohne Kompromisse.</p></div>
-      <div class="feat reveal"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 8v4l3 2"/></svg></div><h3>Eingebettete SVGs</h3><p>Alle Grafiken vektorbasiert &amp; animiert – gestochen scharf, superschnell.</p></div>
-      <div class="feat reveal d1"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2"><path d="M4 4h16v12H4z M2 20h20"/><path d="M8 10h8M8 13h5"/></svg></div><h3>Kontaktformular</h3><p>Interaktives Demo-Formular mit „Danke“-Bestätigung – bereit für Ihr Backend.</p></div>
-      <div class="feat reveal d2"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2"><path d="M12 2l7 4v6c0 5-3 8-7 10-4-2-7-5-7-10V6z"/></svg></div><h3>Eigenständiger Stil</h3><p>Jede Branche bekommt eine eigene Handschrift – individuell &amp; wiedererkennbar.</p></div>
+      <div class="feat reveal"><div class="ic"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2"><path d="M12 3v18M5 10l7-7 7 7"/></svg></div><h3>Scroll-Animationen</h3><p>Inhalte erscheinen sanft beim Scrollen – die Seite fühlt sich lebendig an.</p></div>
+      <div class="feat reveal d1"><div class="ic"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2"><path d="M4 20V8M10 20V4M16 20v-8M22 20H2"/></svg></div><h3>Hochzählende Zahlen</h3><p>Counter, die Erfolge und Kennzahlen wirkungsvoll in Szene setzen.</p></div>
+      <div class="feat reveal d2"><div class="ic"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2"><path d="M9 3H4v5M15 3h5v5M9 21H4v-5M15 21h5v-5"/></svg></div><h3>Responsive Design</h3><p>Perfekt auf Smartphone, Tablet und Desktop – ohne Kompromisse.</p></div>
+      <div class="feat reveal"><div class="ic"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 8v4l3 2"/></svg></div><h3>Eingebettete SVGs</h3><p>Alle Grafiken vektorbasiert &amp; animiert – gestochen scharf, superschnell.</p></div>
+      <div class="feat reveal d1"><div class="ic"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2"><path d="M4 4h16v12H4z M2 20h20"/><path d="M8 10h8M8 13h5"/></svg></div><h3>Kontaktformular</h3><p>Interaktives Demo-Formular mit „Danke“-Bestätigung – bereit für Ihr Backend.</p></div>
+      <div class="feat reveal d2"><div class="ic"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2"><path d="M12 2l7 4v6c0 5-3 8-7 10-4-2-7-5-7-10V6z"/></svg></div><h3>Eigenständiger Stil</h3><p>Jede Branche bekommt eine eigene Handschrift – individuell &amp; wiedererkennbar.</p></div>
     </div>
   </div>
 </section>
@@ -342,8 +423,42 @@
 </footer>
 
 <script>
-  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
-  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+(function(){
+  const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // Scroll-Reveal
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal:not(.in)').forEach(el=>io.observe(el));
+  // Zähler (deutsches Zahlenformat: 1.200 / 4,9)
+  const fmt=(v,d)=>v.toLocaleString('de-DE',{minimumFractionDigits:d,maximumFractionDigits:d});
+  function count(el){const t=parseFloat(el.dataset.count),d=+(el.dataset.dec||0),suf=el.dataset.suffix||'',tg=el.querySelector('.v')||el,st=performance.now(),dur=1600;
+    (function tick(now){let p=reduce?1:Math.min((now-st)/dur,1);p=1-Math.pow(1-p,3);tg.textContent=fmt(t*p,d)+(tg===el?suf:'');if(p<1)requestAnimationFrame(tick)})(st)}
+  const cio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){count(e.target);cio.unobserve(e.target)}}),{threshold:.5});
+  document.querySelectorAll('[data-count]').forEach(el=>cio.observe(el));
+  // Mobile-Menü
+  const b=document.querySelector('.burger'),n=document.querySelector('.nav-links');
+  if(b&&n){const close=()=>{n.classList.remove('open');b.setAttribute('aria-expanded','false');b.setAttribute('aria-label','Menü öffnen')};
+    b.addEventListener('click',()=>{const o=n.classList.toggle('open');b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Menü schließen':'Menü öffnen')});
+    n.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));document.addEventListener('keydown',e=>{if(e.key==='Escape')close()})}
+  // Formular-Labels mit Feldern verknüpfen (Barrierefreiheit)
+  document.querySelectorAll('.field').forEach((f,i)=>{const l=f.querySelector('label'),c=f.querySelector('input,select,textarea');if(l&&c){c.id=c.id||'feld-'+i;l.htmlFor=c.id}});
+  document.querySelectorAll('input:not([id])').forEach(c=>{if(c.placeholder)c.setAttribute('aria-label',c.placeholder)});
+  // Animiertes Balkendiagramm
+  const bars=document.getElementById('bars');
+  if(bars){const bio=new IntersectionObserver(es=>{if(es[0].isIntersecting){bars.classList.add('go');bio.disconnect()}},{threshold:.4});bio.observe(bars)}
+  // Vorher/Nachher-Slider: Maus, Touch, Tastatur + kurzer Hinweis-Schwung
+  const ba=document.getElementById('ba');
+  if(ba){const after=ba.querySelector('.after'),h=document.getElementById('baHandle');let drag=false,touched=false,pos=50;
+    const set=p=>{pos=Math.max(0,Math.min(100,p));after.style.clipPath='inset(0 0 0 '+pos+'%)';h.style.left=pos+'%';ba.setAttribute('aria-valuenow',Math.round(pos))};
+    const fromX=x=>{const r=ba.getBoundingClientRect();set((x-r.left)/r.width*100)};
+    ba.addEventListener('pointerdown',e=>{drag=touched=true;ba.setPointerCapture(e.pointerId);fromX(e.clientX)});
+    ba.addEventListener('pointermove',e=>{if(drag)fromX(e.clientX)});
+    ['pointerup','pointercancel'].forEach(t=>ba.addEventListener(t,()=>drag=false));
+    ba.addEventListener('keydown',e=>{const k={ArrowLeft:-5,ArrowRight:5,Home:-100,End:100}[e.key];if(k!==undefined){touched=true;set(pos+k);e.preventDefault()}});
+    const hio=new IntersectionObserver(es=>{if(!es[0].isIntersecting)return;hio.disconnect();if(reduce)return;const st=performance.now();
+      (function a(now){const t=(now-st)/1800;if(touched)return;if(t>=1){set(50);return}set(50+Math.sin(t*Math.PI*2)*20);requestAnimationFrame(a)})(st)},{threshold:.6});
+    hio.observe(ba)}
+})();
+function sendForm(e,f){e.preventDefault();f.classList.add('sent');const ok=f.querySelector('.form-ok,.form-ok-inline');ok.classList.add('show');ok.setAttribute('role','status');ok.setAttribute('tabindex','-1');ok.focus({preventScroll:true});return false}
 </script>
 </body>
 </html>

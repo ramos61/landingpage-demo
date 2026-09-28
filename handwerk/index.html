@@ -5,9 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Meisterbau Krüger – Bau & Sanierung mit Handschlagqualität</title>
 <meta name="description" content="Meisterbau Krüger – Ihr Bauunternehmen für Rohbau, Sanierung und Ausbau. Meisterbetrieb mit über 25 Jahren Erfahrung.">
+<meta name="theme-color" content="#0e0f12">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Meisterbau Krüger – Bau &amp; Sanierung mit Handschlagqualität">
+<meta property="og:description" content="Meisterbau Krüger – Ihr Bauunternehmen für Rohbau, Sanierung und Ausbau. Meisterbetrieb mit über 25 Jahren Erfahrung.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23ff7a18'/%3E%3Ctext x='16' y='22.5' font-family='Arial,sans-serif' font-weight='700' font-size='18' text-anchor='middle' fill='%23111'%3EK%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<noscript><style>.reveal{opacity:1 !important;transform:none !important}</style></noscript>
 <style>
   :root{
     --bg:#0e0f12; --bg2:#16181d; --panel:#1c1f26; --line:#2a2e37;
@@ -24,21 +30,20 @@
   /* NAV */
   header.nav{position:sticky;top:0;z-index:50;background:rgba(14,15,18,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
   .nav-in{display:flex;align-items:center;justify-content:space-between;height:72px}
-  .brand{display:flex;align-items:center;gap:12px;font-family:'Oswald';font-weight:700;font-size:22px;text-transform:uppercase;letter-spacing:1px}
+  .brand{display:flex;align-items:center;gap:12px;font-family:'Oswald',system-ui,sans-serif;font-weight:700;font-size:22px;text-transform:uppercase;letter-spacing:1px}
   .brand .mk{width:38px;height:38px;flex:0 0 auto}
   .nav-links{display:flex;gap:28px;align-items:center}
-  .nav-links a{color:var(--muted);font-size:14px;font-weight:500;transition:color .2s}
-  .nav-links a:hover{color:var(--ink)}
-  .btn{display:inline-flex;align-items:center;gap:9px;background:var(--accent);color:#111;font-weight:600;padding:13px 24px;border-radius:6px;font-size:15px;transition:transform .2s,box-shadow .2s;border:none;cursor:pointer;font-family:'Inter'}
+  .nav-links a:not(.btn){color:var(--muted);font-size:14px;font-weight:500;transition:color .2s}
+  .nav-links a:not(.btn):hover{color:var(--ink)}
+  .btn{display:inline-flex;align-items:center;gap:9px;background:var(--accent);color:#111;font-weight:600;padding:13px 24px;border-radius:6px;font-size:15px;transition:transform .2s,box-shadow .2s;border:none;cursor:pointer;font-family:'Inter',system-ui,sans-serif}
   .btn:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(255,122,24,.35)}
   .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
   .btn.ghost:hover{border-color:var(--accent);box-shadow:none}
-  @media(max-width:820px){.nav-links{display:none}}
 
   /* HERO */
   .hero{padding:70px 0 90px;background:radial-gradient(1000px 500px at 80% -10%,rgba(255,122,24,.16),transparent 60%),var(--bg)}
   .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}
-  .kicker{display:inline-flex;align-items:center;gap:10px;color:var(--accent);font-family:'Oswald';text-transform:uppercase;letter-spacing:2px;font-size:14px;font-weight:600;margin-bottom:18px}
+  .kicker{display:inline-flex;align-items:center;gap:10px;color:var(--accent);font-family:'Oswald',system-ui,sans-serif;text-transform:uppercase;letter-spacing:2px;font-size:14px;font-weight:600;margin-bottom:18px}
   .kicker::before{content:"";width:34px;height:2px;background:var(--accent)}
   .hero h1{font-size:clamp(40px,6vw,74px);font-weight:700}
   .hero h1 em{color:var(--accent);font-style:normal}
@@ -46,7 +51,7 @@
   .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
   .trust{display:flex;gap:26px;margin-top:34px;flex-wrap:wrap}
   .trust div{display:flex;flex-direction:column}
-  .trust b{font-family:'Oswald';font-size:26px;color:var(--ink)}
+  .trust b{font-family:'Oswald',system-ui,sans-serif;font-size:26px;color:var(--ink)}
   .trust span{color:var(--muted);font-size:13px}
 
   /* offer form card */
@@ -54,31 +59,43 @@
   .offer h3{font-size:24px;margin-bottom:4px}
   .offer .sub{color:var(--muted);font-size:14px;margin-bottom:20px}
   .field{margin-bottom:14px}
-  .field label{display:block;font-size:12px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:6px;font-family:'Oswald'}
-  .field input,.field select,.field textarea{width:100%;background:#101216;border:1px solid var(--line);border-radius:8px;padding:12px 14px;color:var(--ink);font-family:'Inter';font-size:15px;transition:border-color .2s}
+  .field label{display:block;font-size:12px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:6px;font-family:'Oswald',system-ui,sans-serif}
+  .field input,.field select,.field textarea{width:100%;background:#101216;border:1px solid var(--line);border-radius:8px;padding:12px 14px;color:var(--ink);font-family:'Inter',system-ui,sans-serif;font-size:15px;transition:border-color .2s}
   .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--accent)}
   .form-note{font-size:12px;color:var(--muted);margin-top:8px;text-align:center}
   .form-ok{display:none;text-align:center;padding:30px 10px}
   .form-ok .chk{width:64px;height:64px;margin:0 auto 14px}
-  .form-ok h4{font-family:'Oswald';font-size:24px;text-transform:uppercase}
+  .form-ok h4{font-family:'Oswald',system-ui,sans-serif;font-size:24px;text-transform:uppercase}
   .form-ok p{color:var(--muted);font-size:14px}
   .form-ok.show{display:block}
   form.sent .form-body{display:none}
 
-  /* animated construction scene */
-  .scene{position:absolute;inset:0;pointer-events:none;overflow:hidden}
-  .crane-arm{transform-origin:150px 40px;animation:swing 6s ease-in-out infinite}
-  @keyframes swing{0%,100%{transform:rotate(-5deg)}50%{transform:rotate(6deg)}}
-  .hook{animation:hook 6s ease-in-out infinite}
-  @keyframes hook{0%,100%{transform:translateY(0)}50%{transform:translateY(14px)}}
-  .spark{opacity:0;animation:spark 2.6s ease-in-out infinite}
-  @keyframes spark{0%,60%,100%{opacity:0}70%,85%{opacity:1}}
-  .build-block{opacity:0;animation:rise .8s ease forwards}
-  @keyframes rise{to{opacity:1;transform:translateY(0)}}
+  /* animierte Baustellen-Szene im Hero */
+  .hero{position:relative;overflow:hidden;padding-bottom:262px}
+  .hero-grid{position:relative;z-index:2}
+  .hero-scene{position:absolute;left:0;right:0;bottom:0;height:270px;z-index:1;pointer-events:none}
+  .hero-scene svg{width:100%;height:100%;display:block}
+  .fl{opacity:0;animation:fl1 9s ease-out infinite}
+  .fl.f2{animation-name:fl2}.fl.f3{animation-name:fl3}
+  @keyframes fl1{0%,4%{opacity:0;transform:translateY(-26px)}11%,88%{opacity:1;transform:none}96%,100%{opacity:0}}
+  @keyframes fl2{0%,30%{opacity:0;transform:translateY(-26px)}37%,88%{opacity:1;transform:none}96%,100%{opacity:0}}
+  @keyframes fl3{0%,56%{opacity:0;transform:translateY(-26px)}63%,88%{opacity:1;transform:none}96%,100%{opacity:0}}
+  .trolley{animation:trolley 3s ease-in-out infinite}
+  @keyframes trolley{0%,100%{transform:translateX(190px)}40%,62%{transform:translateX(0)}}
+  .load{animation:load 3s ease-in-out infinite}
+  @keyframes load{0%,38%,66%,100%{transform:translateY(0)}48%,56%{transform:translateY(34px)}}
+  .arm{transform-origin:1128px 184px;animation:dig 4.2s ease-in-out infinite}
+  @keyframes dig{0%,100%{transform:rotate(0)}40%{transform:rotate(-16deg)}70%{transform:rotate(7deg)}}
+  .blink{animation:blink 1.4s steps(1) infinite}
+  @keyframes blink{0%,50%{opacity:1}51%,100%{opacity:.15}}
+  .spk circle{opacity:0;animation:spark 1.3s ease-in-out infinite}
+  .spk circle:nth-child(2){animation-delay:.2s}.spk circle:nth-child(3){animation-delay:.45s}.spk circle:nth-child(4){animation-delay:.7s}
+  @keyframes spark{0%,55%,100%{opacity:0;transform:translate(0,0)}65%{opacity:1}90%{opacity:0;transform:translate(6px,14px)}}
+  @media(max-width:640px){.hero{padding-bottom:186px}.hero-scene{height:190px}}
 
   /* MARQUEE */
   .marquee{background:var(--accent);color:#111;overflow:hidden;border-top:1px solid #111;border-bottom:1px solid #111;padding:16px 0}
-  .marquee-track{display:flex;gap:50px;white-space:nowrap;width:max-content;animation:scroll 22s linear infinite;font-family:'Oswald';text-transform:uppercase;font-weight:600;font-size:20px;letter-spacing:2px}
+  .marquee-track{display:flex;gap:50px;white-space:nowrap;width:max-content;animation:scroll 22s linear infinite;font-family:'Oswald',system-ui,sans-serif;text-transform:uppercase;font-weight:600;font-size:20px;letter-spacing:2px}
   .marquee-track span{display:inline-flex;align-items:center;gap:50px}
   .marquee-track span::after{content:"◆";font-size:12px}
   @keyframes scroll{to{transform:translateX(-50%)}}
@@ -102,17 +119,17 @@
   /* STATS */
   .stats{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
   .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
-  .stat .num{font-family:'Oswald';font-size:clamp(44px,6vw,68px);font-weight:700;color:var(--accent);line-height:1}
-  .stat .lab{color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;font-size:13px;margin-top:8px;font-family:'Oswald'}
+  .stat .num{font-family:'Oswald',system-ui,sans-serif;font-size:clamp(44px,6vw,68px);font-weight:700;color:var(--accent);line-height:1}
+  .stat .lab{color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;font-size:13px;margin-top:8px;font-family:'Oswald',system-ui,sans-serif}
   @media(max-width:640px){.stats-grid{grid-template-columns:repeat(2,1fr);gap:34px}}
 
   /* BEFORE/AFTER */
-  .ba{position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--line);aspect-ratio:16/9;cursor:ew-resize;user-select:none;box-shadow:0 30px 70px rgba(0,0,0,.5)}
+  .ba{position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--line);aspect-ratio:16/9;cursor:ew-resize;user-select:none;touch-action:pan-y;box-shadow:0 30px 70px rgba(0,0,0,.5)}
   .ba svg{position:absolute;inset:0;width:100%;height:100%;display:block}
   .ba .after{clip-path:inset(0 0 0 50%)}
   .ba-handle{position:absolute;top:0;bottom:0;left:50%;width:3px;background:var(--accent);transform:translateX(-50%);z-index:3}
   .ba-knob{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:46px;height:46px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,.5)}
-  .ba-tag{position:absolute;top:16px;padding:6px 14px;border-radius:6px;font-family:'Oswald';text-transform:uppercase;letter-spacing:1px;font-size:13px;font-weight:600;z-index:4}
+  .ba-tag{position:absolute;top:16px;padding:6px 14px;border-radius:6px;font-family:'Oswald',system-ui,sans-serif;text-transform:uppercase;letter-spacing:1px;font-size:13px;font-weight:600;z-index:4}
   .ba-tag.b{left:16px;background:rgba(0,0,0,.6);color:#fff}
   .ba-tag.a{right:16px;background:var(--accent);color:#111}
 
@@ -122,7 +139,7 @@
   .quote p{font-size:16px;margin-bottom:20px}
   .quote .who{display:flex;align-items:center;gap:12px}
   .quote .av{width:44px;height:44px;border-radius:50%;flex:0 0 auto}
-  .quote .who b{font-family:'Oswald';font-size:16px;text-transform:uppercase;letter-spacing:.5px}
+  .quote .who b{font-family:'Oswald',system-ui,sans-serif;font-size:16px;text-transform:uppercase;letter-spacing:.5px}
   .quote .who span{display:block;color:var(--muted);font-size:13px}
 
   /* CTA */
@@ -130,7 +147,7 @@
   .cta-box{background:linear-gradient(120deg,var(--accent),#e85d00);border-radius:20px;padding:56px;display:grid;grid-template-columns:1.4fr 1fr;gap:30px;align-items:center;color:#111;position:relative;overflow:hidden}
   .cta-box h2{color:#111;font-size:clamp(30px,4vw,46px)}
   .cta-box p{color:#3a2100;font-weight:500;margin-top:10px}
-  .phone{display:inline-flex;align-items:center;gap:14px;background:#111;color:#fff;padding:18px 26px;border-radius:12px;font-family:'Oswald';font-size:26px;letter-spacing:1px;transition:transform .2s}
+  .phone{display:inline-flex;align-items:center;gap:14px;background:#111;color:#fff;padding:18px 26px;border-radius:12px;font-family:'Oswald',system-ui,sans-serif;font-size:26px;letter-spacing:1px;transition:transform .2s}
   .phone:hover{transform:scale(1.03)}
   @media(max-width:760px){.cta-box{grid-template-columns:1fr;padding:36px}}
 
@@ -147,6 +164,26 @@
   .demo-badge:hover{transform:translateY(-2px);border-color:var(--accent)}
   .demo-badge .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(255,122,24,.2)}
   @media(max-width:640px){.hero-grid{grid-template-columns:1fr}.cta-box{text-align:center}.stats,.sec{padding-left:0}}
+
+  /* === Verbesserungen: Mobile-Menü, Fokus, Reduced Motion === */
+  :root{--nav-bg:#0e0f12;--nav-ink:#f4f5f7;--nav-line:#2a2e37;--focus:#ff7a18}
+  .burger{display:none;width:44px;height:44px;border:0;background:transparent;cursor:pointer;flex-direction:column;justify-content:center;align-items:center;gap:5px;color:var(--nav-ink)}
+  .burger span{display:block;width:22px;height:2px;background:currentColor;border-radius:2px;transition:transform .3s,opacity .3s}
+  .burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+  .burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  @media(max-width:840px){
+    .burger{display:flex}
+    .brand{white-space:nowrap}
+    .nav-links{position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;padding:8px 20px 20px;background:var(--nav-bg);border-bottom:1px solid var(--nav-line);box-shadow:0 20px 40px rgba(0,0,0,.18);opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .25s,transform .25s,visibility .25s}
+    .nav-links.open{opacity:1;visibility:visible;transform:none}
+    .nav-links a:not(.btn){display:block !important;padding:14px 4px;border-bottom:1px solid var(--nav-line);font-size:17px;color:var(--nav-ink)}
+    .nav-links a.btn{margin-top:14px;justify-content:center}
+  }
+  button,input,select,textarea{font-family:inherit}
+  a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--focus);outline-offset:3px}
+  .legal a{text-decoration:underline;text-underline-offset:3px}
+  @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important}.reveal{opacity:1 !important;transform:none !important}}
 </style>
 </head>
 <body>
@@ -157,12 +194,13 @@
       <svg class="mk" viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="8" fill="#ff7a18"/><path d="M9 27L20 11l11 16" stroke="#111" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 27v-6h6v6" stroke="#111" stroke-width="2.4" stroke-linecap="round"/></svg>
       Meisterbau Krüger
     </a>
-    <nav class="nav-links">
+    <nav class="nav-links" id="menu" aria-label="Hauptnavigation">
       <a href="#leistungen">Leistungen</a>
       <a href="#referenzen">Referenzen</a>
       <a href="#stimmen">Stimmen</a>
       <a href="#kontakt" class="btn">Angebot anfragen</a>
     </nav>
+    <button class="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
   </div>
 </header>
 
@@ -184,13 +222,6 @@
     </div>
 
     <div class="offer reveal in d1">
-      <div class="scene">
-        <svg viewBox="0 0 380 360" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" style="opacity:.10;position:absolute;inset:0">
-          <g stroke="#ff7a18" stroke-width="2" fill="none">
-            <line x1="30" y1="40" x2="60" y2="10" class="crane-arm"/>
-          </g>
-        </svg>
-      </div>
       <form id="offerForm" onsubmit="return sendForm(event,this)">
         <div class="form-body">
           <h3>In 60 Sekunden zum Angebot</h3>
@@ -212,6 +243,84 @@
       </form>
     </div>
   </div>
+
+  <div class="hero-scene" aria-hidden="true">
+    <svg viewBox="0 0 1440 270" preserveAspectRatio="xMidYMax slice">
+      <defs>
+        <linearGradient id="gnd" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1d2027"/><stop offset="1" stop-color="#0e0f12"/></linearGradient>
+        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0e0f12" stop-opacity="0"/><stop offset="1" stop-color="#ff7a18" stop-opacity=".08"/></linearGradient>
+        <pattern id="haz" width="16" height="16" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="16" fill="#ff7a18"/><rect x="8" width="8" height="16" fill="#14161a"/></pattern>
+      </defs>
+      <rect width="1440" height="270" fill="url(#sky)"/>
+      <!-- Stadt-Silhouette -->
+      <g fill="#15171c">
+        <rect x="0" y="150" width="80" height="120"/><rect x="86" y="118" width="54" height="152"/><rect x="146" y="170" width="40" height="100"/>
+        <rect x="560" y="176" width="40" height="94"/><rect x="820" y="140" width="70" height="130"/><rect x="896" y="176" width="46" height="94"/>
+        <rect x="1210" y="128" width="72" height="142"/><rect x="1288" y="164" width="56" height="106"/><rect x="1350" y="112" width="90" height="158"/>
+      </g>
+      <g fill="#1f2229"><rect x="96" y="130" width="8" height="8"/><rect x="116" y="130" width="8" height="8"/><rect x="96" y="150" width="8" height="8"/><rect x="1364" y="126" width="8" height="8"/><rect x="1384" y="146" width="8" height="8"/><rect x="1224" y="142" width="8" height="8"/></g>
+      <!-- Boden -->
+      <rect y="246" width="1440" height="24" fill="url(#gnd)"/>
+      <path d="M0 246h1440" stroke="#2a2e37" stroke-width="2"/>
+      <!-- Rohbau: wächst Stockwerk für Stockwerk -->
+      <g>
+        <rect x="200" y="206" width="320" height="40" fill="#22262e"/>
+        <g fill="#15171c"><rect x="222" y="216" width="36" height="20"/><rect x="282" y="216" width="36" height="20"/><rect x="402" y="216" width="36" height="20"/><rect x="462" y="216" width="36" height="20"/></g>
+        <rect x="340" y="214" width="40" height="32" fill="#ff7a18" opacity=".8"/>
+        <g class="fl"><rect x="200" y="166" width="320" height="40" fill="#262a33"/><g fill="#15171c"><rect x="222" y="176" width="36" height="20"/><rect x="282" y="176" width="36" height="20"/><rect x="342" y="176" width="36" height="20"/><rect x="402" y="176" width="36" height="20"/><rect x="462" y="176" width="36" height="20"/></g></g>
+        <g class="fl f2"><rect x="200" y="126" width="320" height="40" fill="#2a2e37"/><g fill="#15171c"><rect x="222" y="136" width="36" height="20"/><rect x="282" y="136" width="36" height="20"/><rect x="342" y="136" width="36" height="20"/><rect x="402" y="136" width="36" height="20"/><rect x="462" y="136" width="36" height="20"/></g></g>
+        <g class="fl f3"><rect x="200" y="86" width="320" height="40" fill="#2f3440"/><g fill="#15171c"><rect x="222" y="96" width="36" height="20"/><rect x="282" y="96" width="36" height="20"/><rect x="342" y="96" width="36" height="20"/></g><rect x="400" y="86" width="120" height="6" fill="#ff7a18"/></g>
+        <!-- Gerüst -->
+        <g stroke="#3a3f4a" stroke-width="2.5"><path d="M188 246V76M532 246V76M188 206h12M188 166h12M188 126h12M188 86h12M520 206h12M520 166h12M520 126h12M520 86h12"/><path d="M188 206l12-40M188 126l12-40M532 206l-12-40M532 126l-12-40" stroke-width="1.5"/></g>
+        <!-- Schweißfunken -->
+        <g class="spk" fill="#ffb066"><circle cx="512" cy="150" r="2.5"/><circle cx="516" cy="146" r="2"/><circle cx="508" cy="146" r="1.8"/><circle cx="514" cy="154" r="2"/></g>
+        <circle cx="512" cy="150" r="5" fill="#fff4dc" class="blink" style="animation-duration:.5s"/>
+      </g>
+      <!-- Kran -->
+      <g>
+        <g stroke="#ff7a18" stroke-width="3" fill="none">
+          <path d="M600 246V36M624 246V36"/>
+          <path d="M600 246l24-21-24-21 24-21-24-21 24-21-24-21 24-21-24-21 24-21-24-21" stroke-width="2"/>
+          <path d="M250 36h510M250 50h510" />
+          <path d="M250 50l14-14 14 14 14-14 14 14 14-14 14 14 14-14 14 14 14-14 14 14 14-14 14 14 14-14 14 14 14-14 14 14 14-14 14 14 14-14 14 14 14-14 14 14 14-14 14 14 14-14 14 14" stroke-width="1.5"/>
+          <path d="M612 6L260 36M612 6L752 36" stroke="#a0561a" stroke-width="1.5"/>
+          <path d="M600 36L612 6l12 30"/>
+        </g>
+        <rect x="690" y="50" width="62" height="30" fill="#2f3440"/>
+        <rect x="628" y="50" width="34" height="22" rx="2" fill="#ff7a18"/><rect x="634" y="55" width="16" height="10" fill="#1c1f26"/>
+        <circle class="blink" cx="612" cy="4" r="4" fill="#ff3b30"/>
+        <!-- Laufkatze mit Last -->
+        <g class="trolley">
+          <rect x="350" y="50" width="22" height="8" fill="#ffb066"/>
+          <g class="load">
+            <path d="M361 58v48" stroke="#8a8f99" stroke-width="1.5"/>
+            <path d="M356 106h10l-5 8z" fill="#ffb066"/>
+            <path d="M361 114l-30 10M361 114l30 10" stroke="#8a8f99" stroke-width="1"/>
+            <rect x="321" y="124" width="80" height="10" fill="#ff7a18"/>
+          </g>
+        </g>
+      </g>
+      <!-- Absperrung + Leitkegel -->
+      <g><rect x="690" y="222" width="120" height="12" fill="url(#haz)"/><path d="M698 234v12M802 234v12" stroke="#8a8f99" stroke-width="3"/></g>
+      <g><path d="M850 246l10-30 10 30z" fill="#ff7a18"/><rect x="853" y="230" width="14" height="4" fill="#fff"/><path d="M884 246l10-30 10 30z" fill="#ff7a18"/><rect x="887" y="230" width="14" height="4" fill="#fff"/></g>
+      <!-- Bagger -->
+      <g>
+        <path d="M1275 246c10-30 40-44 70-44s50 20 60 44z" fill="#2a2420"/>
+        <rect x="1010" y="222" width="150" height="24" rx="12" fill="#262a33"/>
+        <g fill="#3a3f4a"><circle cx="1026" cy="234" r="7"/><circle cx="1058" cy="234" r="7"/><circle cx="1090" cy="234" r="7"/><circle cx="1122" cy="234" r="7"/><circle cx="1144" cy="234" r="7"/></g>
+        <rect x="1030" y="186" width="112" height="38" rx="6" fill="#ff7a18"/>
+        <rect x="1032" y="152" width="48" height="36" rx="4" fill="#ff7a18"/>
+        <rect x="1040" y="158" width="32" height="20" rx="2" fill="#1c1f26"/>
+        <rect x="1090" y="194" width="40" height="6" fill="#c75a0c"/>
+        <g class="arm">
+          <path d="M1128 184L1212 120" stroke="#ff7a18" stroke-width="14" stroke-linecap="round"/>
+          <path d="M1212 120L1262 188" stroke="#e8690f" stroke-width="11" stroke-linecap="round"/>
+          <path d="M1250 184l30 4-6 24-30-8z" fill="#c75a0c"/>
+          <circle cx="1212" cy="120" r="6" fill="#1c1f26"/>
+        </g>
+      </g>
+    </svg>
+  </div>
 </section>
 
 <div class="marquee">
@@ -229,12 +338,12 @@
       <p>Vom Fundament bis zum letzten Anstrich koordinieren wir alles selbst – Sie haben nur einen Ansprechpartner.</p>
     </div>
     <div class="grid3">
-      <div class="card reveal"><div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ff7a18" stroke-width="2"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg></div><h3>Rohbau</h3><p>Fundament, Mauerwerk und Decken – tragfähig geplant und millimetergenau umgesetzt.</p></div>
-      <div class="card reveal d1"><div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ff7a18" stroke-width="2"><path d="M4 20V9l8-6 8 6v11M4 20h16M10 20v-5h4v5"/><path d="M14 3v4"/></svg></div><h3>Sanierung</h3><p>Altbau energetisch fit machen – Dämmung, Fenster, Leitungen, neuer Grundriss.</p></div>
-      <div class="card reveal d2"><div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ff7a18" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="1"/><path d="M4 9h16M9 4v16"/></svg></div><h3>Fassade</h3><p>Wärmedämmverbund, Putz und Klinker – Optik und Effizienz in einem Zug.</p></div>
-      <div class="card reveal"><div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ff7a18" stroke-width="2"><path d="M2 12l10-8 10 8M5 10v9h14v-9"/></svg></div><h3>Dachausbau</h3><p>Neuer Wohnraum unterm Dach – Gauben, Dämmung und lichtdurchflutete Räume.</p></div>
-      <div class="card reveal d1"><div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ff7a18" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 15h18M9 21V9"/></svg></div><h3>Trockenbau</h3><p>Wände, Decken, Akustik – flexible Grundrisse ohne Baustaub-Chaos.</p></div>
-      <div class="card reveal d2"><div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ff7a18" stroke-width="2"><path d="M4 19h16M6 19V9h12v10M9 9V5h6v4"/></svg></div><h3>Innenausbau</h3><p>Böden, Bäder und Türen – der letzte Schliff, der ein Haus zum Zuhause macht.</p></div>
+      <div class="card reveal"><div class="ic"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ff7a18" stroke-width="2"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg></div><h3>Rohbau</h3><p>Fundament, Mauerwerk und Decken – tragfähig geplant und millimetergenau umgesetzt.</p></div>
+      <div class="card reveal d1"><div class="ic"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ff7a18" stroke-width="2"><path d="M4 20V9l8-6 8 6v11M4 20h16M10 20v-5h4v5"/><path d="M14 3v4"/></svg></div><h3>Sanierung</h3><p>Altbau energetisch fit machen – Dämmung, Fenster, Leitungen, neuer Grundriss.</p></div>
+      <div class="card reveal d2"><div class="ic"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ff7a18" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="1"/><path d="M4 9h16M9 4v16"/></svg></div><h3>Fassade</h3><p>Wärmedämmverbund, Putz und Klinker – Optik und Effizienz in einem Zug.</p></div>
+      <div class="card reveal"><div class="ic"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ff7a18" stroke-width="2"><path d="M2 12l10-8 10 8M5 10v9h14v-9"/></svg></div><h3>Dachausbau</h3><p>Neuer Wohnraum unterm Dach – Gauben, Dämmung und lichtdurchflutete Räume.</p></div>
+      <div class="card reveal d1"><div class="ic"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ff7a18" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 15h18M9 21V9"/></svg></div><h3>Trockenbau</h3><p>Wände, Decken, Akustik – flexible Grundrisse ohne Baustaub-Chaos.</p></div>
+      <div class="card reveal d2"><div class="ic"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ff7a18" stroke-width="2"><path d="M4 19h16M6 19V9h12v10M9 9V5h6v4"/></svg></div><h3>Innenausbau</h3><p>Böden, Bäder und Türen – der letzte Schliff, der ein Haus zum Zuhause macht.</p></div>
     </div>
   </div>
 </section>
@@ -257,7 +366,7 @@
       <h2>Aus alt mach neu – ziehen Sie den Regler</h2>
       <p>Ein echtes Sanierungsprojekt: verwohnter Altbau links, frisch renovierter Wohnraum rechts. Bewegen Sie den Griff.</p>
     </div>
-    <div class="ba reveal" id="ba">
+    <div class="ba reveal" id="ba" tabindex="0" role="slider" aria-label="Vorher/Nachher-Vergleich – mit Pfeiltasten verschieben" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
       <!-- BEFORE: grey old room -->
       <svg class="before" viewBox="0 0 800 450" preserveAspectRatio="xMidYMid slice">
         <rect width="800" height="450" fill="#3a3d42"/>
@@ -271,7 +380,7 @@
         <rect x="520" y="70" width="120" height="200" fill="#2f3237"/>
         <path d="M520 70h120v200h-120z M540 90h80v70h-80z M540 180h80v70h-80z" fill="#26282c" stroke="#1f2125"/>
         <path d="M0 300c120 20 300-10 800 8" stroke="#26282c" stroke-width="6" fill="none"/>
-        <text x="400" y="415" fill="#6b6e73" font-family="Oswald" font-size="22" text-anchor="middle" letter-spacing="3">UNRENOVIERT</text>
+        <text x="400" y="415" fill="#6b6e73" font-family="Oswald,sans-serif" font-size="22" text-anchor="middle" letter-spacing="3">UNRENOVIERT</text>
       </svg>
       <!-- AFTER: renovated warm room -->
       <svg class="after" viewBox="0 0 800 450" preserveAspectRatio="xMidYMid slice">
@@ -288,12 +397,12 @@
         <rect x="330" y="150" width="140" height="90" rx="6" fill="#ff7a18" opacity=".85"/>
         <rect x="345" y="240" width="110" height="14" rx="4" fill="#8a5a2b"/>
         <circle cx="400" cy="120" r="4" fill="#ffb066"/><path d="M400 60v56" stroke="#b98a4e" stroke-width="2"/>
-        <text x="400" y="415" fill="#7a5a2f" font-family="Oswald" font-size="22" text-anchor="middle" letter-spacing="3">RENOVIERT</text>
+        <text x="400" y="415" fill="#7a5a2f" font-family="Oswald,sans-serif" font-size="22" text-anchor="middle" letter-spacing="3">RENOVIERT</text>
       </svg>
       <span class="ba-tag b">Vorher</span>
       <span class="ba-tag a">Nachher</span>
       <div class="ba-handle" id="baHandle">
-        <div class="ba-knob"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.4"><path d="M9 6l-4 6 4 6M15 6l4 6-4 6"/></svg></div>
+        <div class="ba-knob"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.4"><path d="M9 6l-4 6 4 6M15 6l4 6-4 6"/></svg></div>
       </div>
     </div>
   </div>
@@ -306,9 +415,9 @@
       <h2>Bauherren, die weiterempfehlen</h2>
     </div>
     <div class="grid3">
-      <div class="quote reveal"><div class="stars">★★★★★</div><p>„Termin gehalten, Budget gehalten, Baustelle jeden Abend besenrein. So stellt man sich einen Meisterbetrieb vor.“</p><div class="who"><svg class="av" viewBox="0 0 44 44"><circle cx="22" cy="22" r="22" fill="#ff7a18"/><text x="22" y="29" text-anchor="middle" font-family="Oswald" font-size="18" fill="#111">TR</text></svg><div><b>Thomas R.</b><span>Einfamilienhaus, Sanierung</span></div></div></div>
-      <div class="quote reveal d1"><div class="stars">★★★★★</div><p>„Vom Angebot bis zur Übergabe alles transparent. Der Dachausbau hat unser Haus komplett aufgewertet.“</p><div class="who"><svg class="av" viewBox="0 0 44 44"><circle cx="22" cy="22" r="22" fill="#ffb066"/><text x="22" y="29" text-anchor="middle" font-family="Oswald" font-size="18" fill="#111">SK</text></svg><div><b>Sabine K.</b><span>Dachausbau, Altbau</span></div></div></div>
-      <div class="quote reveal d2"><div class="stars">★★★★★</div><p>„Ehrliche Beratung ohne teure Extras. Man merkt, dass hier Handwerker mit Herzblut arbeiten.“</p><div class="who"><svg class="av" viewBox="0 0 44 44"><circle cx="22" cy="22" r="22" fill="#ff7a18"/><text x="22" y="29" text-anchor="middle" font-family="Oswald" font-size="18" fill="#111">MB</text></svg><div><b>Markus B.</b><span>Neubau, Rohbau</span></div></div></div>
+      <div class="quote reveal"><div class="stars">★★★★★</div><p>„Termin gehalten, Budget gehalten, Baustelle jeden Abend besenrein. So stellt man sich einen Meisterbetrieb vor.“</p><div class="who"><svg class="av" viewBox="0 0 44 44"><circle cx="22" cy="22" r="22" fill="#ff7a18"/><text x="22" y="29" text-anchor="middle" font-family="Oswald,sans-serif" font-size="18" fill="#111">TR</text></svg><div><b>Thomas R.</b><span>Einfamilienhaus, Sanierung</span></div></div></div>
+      <div class="quote reveal d1"><div class="stars">★★★★★</div><p>„Vom Angebot bis zur Übergabe alles transparent. Der Dachausbau hat unser Haus komplett aufgewertet.“</p><div class="who"><svg class="av" viewBox="0 0 44 44"><circle cx="22" cy="22" r="22" fill="#ffb066"/><text x="22" y="29" text-anchor="middle" font-family="Oswald,sans-serif" font-size="18" fill="#111">SK</text></svg><div><b>Sabine K.</b><span>Dachausbau, Altbau</span></div></div></div>
+      <div class="quote reveal d2"><div class="stars">★★★★★</div><p>„Ehrliche Beratung ohne teure Extras. Man merkt, dass hier Handwerker mit Herzblut arbeiten.“</p><div class="who"><svg class="av" viewBox="0 0 44 44"><circle cx="22" cy="22" r="22" fill="#ff7a18"/><text x="22" y="29" text-anchor="middle" font-family="Oswald,sans-serif" font-size="18" fill="#111">MB</text></svg><div><b>Markus B.</b><span>Neubau, Rohbau</span></div></div></div>
     </div>
   </div>
 </section>
@@ -322,7 +431,7 @@
       </div>
       <div style="text-align:right">
         <a href="tel:+49000000000" class="phone">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#ff7a18" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+          <svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#ff7a18" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
           030 – 12 34 56 78
         </a>
       </div>
@@ -333,34 +442,49 @@
 <footer>
   <div class="wrap foot-in">
     <div><strong style="font-family:Oswald;text-transform:uppercase;color:var(--ink)">Meisterbau Krüger</strong> · Demo-Referenz · Musterstraße 12, 10115 Berlin</div>
-    <div>Erfundenes Beispielunternehmen · Kein reales Angebot</div>
+    <div class="legal">Erfundenes Beispielunternehmen · Kein reales Angebot · <a href="#impressum">Impressum</a> · <a href="#datenschutz">Datenschutz</a></div>
   </div>
 </footer>
 
 <a class="demo-badge" href="../index.html"><span class="dot"></span> Demo-Referenz · zur Übersicht</a>
 
 <script>
-  // reveal on scroll
-  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.14});
-  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-
-  // counters
-  const cio=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){count(e.target);cio.unobserve(e.target)}})},{threshold:.6});
+(function(){
+  const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // Scroll-Reveal
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal:not(.in)').forEach(el=>io.observe(el));
+  // Zähler (deutsches Zahlenformat: 1.200 / 4,9)
+  const fmt=(v,d)=>v.toLocaleString('de-DE',{minimumFractionDigits:d,maximumFractionDigits:d});
+  function count(el){const t=parseFloat(el.dataset.count),d=+(el.dataset.dec||0),suf=el.dataset.suffix||'',tg=el.querySelector('.v')||el,st=performance.now(),dur=1600;
+    (function tick(now){let p=reduce?1:Math.min((now-st)/dur,1);p=1-Math.pow(1-p,3);tg.textContent=fmt(t*p,d)+(tg===el?suf:'');if(p<1)requestAnimationFrame(tick)})(st)}
+  const cio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){count(e.target);cio.unobserve(e.target)}}),{threshold:.5});
   document.querySelectorAll('[data-count]').forEach(el=>cio.observe(el));
-  function count(el){const t=+el.dataset.count,suf=el.dataset.suffix||'';let s=0,d=1400,st=performance.now();
-    function tick(now){let p=Math.min((now-st)/d,1);p=1-Math.pow(1-p,3);el.textContent=Math.round(t*p)+suf;if(p<1)requestAnimationFrame(tick)}requestAnimationFrame(tick)}
-
-  // form
-  function sendForm(e,f){e.preventDefault();f.classList.add('sent');f.querySelector('.form-ok').classList.add('show');return false}
-
-  // before/after slider
-  (function(){const ba=document.getElementById('ba'),after=ba.querySelector('.after'),h=document.getElementById('baHandle');
-    let drag=false;function set(x){const r=ba.getBoundingClientRect();let p=(x-r.left)/r.width;p=Math.max(0,Math.min(1,p));after.style.clipPath='inset(0 0 0 '+(p*100)+'%)';h.style.left=(p*100)+'%'}
-    ba.addEventListener('mousedown',e=>{drag=true;set(e.clientX)});
-    window.addEventListener('mousemove',e=>{if(drag)set(e.clientX)});window.addEventListener('mouseup',()=>drag=false);
-    ba.addEventListener('touchstart',e=>set(e.touches[0].clientX),{passive:true});
-    ba.addEventListener('touchmove',e=>set(e.touches[0].clientX),{passive:true});
-  })();
+  // Mobile-Menü
+  const b=document.querySelector('.burger'),n=document.querySelector('.nav-links');
+  if(b&&n){const close=()=>{n.classList.remove('open');b.setAttribute('aria-expanded','false');b.setAttribute('aria-label','Menü öffnen')};
+    b.addEventListener('click',()=>{const o=n.classList.toggle('open');b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Menü schließen':'Menü öffnen')});
+    n.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));document.addEventListener('keydown',e=>{if(e.key==='Escape')close()})}
+  // Formular-Labels mit Feldern verknüpfen (Barrierefreiheit)
+  document.querySelectorAll('.field').forEach((f,i)=>{const l=f.querySelector('label'),c=f.querySelector('input,select,textarea');if(l&&c){c.id=c.id||'feld-'+i;l.htmlFor=c.id}});
+  document.querySelectorAll('input:not([id])').forEach(c=>{if(c.placeholder)c.setAttribute('aria-label',c.placeholder)});
+  // Animiertes Balkendiagramm
+  const bars=document.getElementById('bars');
+  if(bars){const bio=new IntersectionObserver(es=>{if(es[0].isIntersecting){bars.classList.add('go');bio.disconnect()}},{threshold:.4});bio.observe(bars)}
+  // Vorher/Nachher-Slider: Maus, Touch, Tastatur + kurzer Hinweis-Schwung
+  const ba=document.getElementById('ba');
+  if(ba){const after=ba.querySelector('.after'),h=document.getElementById('baHandle');let drag=false,touched=false,pos=50;
+    const set=p=>{pos=Math.max(0,Math.min(100,p));after.style.clipPath='inset(0 0 0 '+pos+'%)';h.style.left=pos+'%';ba.setAttribute('aria-valuenow',Math.round(pos))};
+    const fromX=x=>{const r=ba.getBoundingClientRect();set((x-r.left)/r.width*100)};
+    ba.addEventListener('pointerdown',e=>{drag=touched=true;ba.setPointerCapture(e.pointerId);fromX(e.clientX)});
+    ba.addEventListener('pointermove',e=>{if(drag)fromX(e.clientX)});
+    ['pointerup','pointercancel'].forEach(t=>ba.addEventListener(t,()=>drag=false));
+    ba.addEventListener('keydown',e=>{const k={ArrowLeft:-5,ArrowRight:5,Home:-100,End:100}[e.key];if(k!==undefined){touched=true;set(pos+k);e.preventDefault()}});
+    const hio=new IntersectionObserver(es=>{if(!es[0].isIntersecting)return;hio.disconnect();if(reduce)return;const st=performance.now();
+      (function a(now){const t=(now-st)/1800;if(touched)return;if(t>=1){set(50);return}set(50+Math.sin(t*Math.PI*2)*20);requestAnimationFrame(a)})(st)},{threshold:.6});
+    hio.observe(ba)}
+})();
+function sendForm(e,f){e.preventDefault();f.classList.add('sent');const ok=f.querySelector('.form-ok,.form-ok-inline');ok.classList.add('show');ok.setAttribute('role','status');ok.setAttribute('tabindex','-1');ok.focus({preventScroll:true});return false}
 </script>
 </body>
 </html>
