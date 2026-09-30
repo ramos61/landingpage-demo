@@ -28,3 +28,4 @@ restaurant/media/private-dining.webp https://d8j0ntlcm91z4.cloudfront.net/user_3
 handwerk/media/hero.mp4 https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_205924_d8e92d2d-f8eb-4cbd-a86d-5fae2e441abb.mp4
 zahnarzt/media/hero.mp4 https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_205924_93980327-8140-4861-b0ba-1dbc0011fd94.mp4
 restaurant/media/hero.mp4 https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_205925_48f585e1-c12e-48d6-b758-12ccb37aa9ad.mp4
+dienstleister/media/hero.mp4 https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_205925_c4025ce8-0c3e-49a9-8546-58cc345ec41a.mp4
