@@ -26,21 +26,21 @@ jobs:
       - name: Herunterladen & optimieren
         run: |
           set -euo pipefail
-          while read -r dest url; do
+          while read -r dest url <&3; do
             case "$dest" in ''|\#*) continue ;; esac
             if [ -f "$dest" ]; then echo "vorhanden: $dest"; continue; fi
             mkdir -p "$(dirname "$dest")"
             tmp="$(mktemp)"
             curl -fsSL --retry 3 "$url" -o "$tmp"
             case "$dest" in
-              *.webp) ffmpeg -loglevel error -y -i "$tmp" -vf "scale='min(1920,iw)':-2" -c:v libwebp -quality 78 "$dest" ;;
-              *.jpg)  ffmpeg -loglevel error -y -i "$tmp" -vf "scale='min(1920,iw)':-2" -q:v 4 "$dest" ;;
-              *.mp4)  ffmpeg -loglevel error -y -i "$tmp" -an -vf "scale='min(1920,iw)':-2,fps=30" \
+              *.webp) ffmpeg -nostdin -loglevel error -y -i "$tmp" -vf "scale='min(1920,iw)':-2" -c:v libwebp -quality 78 "$dest" ;;
+              *.jpg)  ffmpeg -nostdin -loglevel error -y -i "$tmp" -vf "scale='min(1920,iw)':-2" -q:v 4 "$dest" ;;
+              *.mp4)  ffmpeg -nostdin -loglevel error -y -i "$tmp" -an -vf "scale='min(1920,iw)':-2,fps=30" \
                         -c:v libx264 -preset slow -crf 27 -pix_fmt yuv420p -movflags +faststart "$dest" ;;
               *)      cp "$tmp" "$dest" ;;
             esac
             echo "ok: $dest ($(du -h "$dest" | cut -f1))"
-          done < media-sources.txt
+          done 3< media-sources.txt
 
       - name: Ergebnis committen
         run: |
