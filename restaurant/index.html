@@ -54,10 +54,10 @@
   .hero .kicker{color:var(--gold)}
   .hero h1{font-size:clamp(48px,7vw,104px);max-width:760px}
   .hero h1 em{color:var(--gold)}
-  .hero p.lead{color:#e6dccb;font-size:clamp(17px,1.5vw,20px);max-width:500px;margin:26px 0 36px}
+  .hero p.lead{color:#e6dccb;font-size:clamp(17px,1.5vw,20px);max-width:430px;margin:26px 0 36px}
   .hero-cta{display:flex;gap:12px;flex-wrap:wrap}
   .hero-foot{display:flex;gap:44px;flex-wrap:wrap;margin-top:64px;padding-top:26px;border-top:1px solid rgba(255,255,255,.16)}
-  .hero-foot div{display:flex;align-items:center;gap:12px;font-size:14px;color:#d8cdb9}
+  .hero-foot>div{display:flex;align-items:center;gap:12px;font-size:14px;color:#d8cdb9}
   .hero-foot b{display:block;color:#fff;font-size:15px}
 
   /* HIGHLIGHTS */
@@ -230,6 +230,8 @@
   }
   a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--focus);outline-offset:3px}
   @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important}.reveal,.img-reveal img{opacity:1 !important;transform:none !important}.img-reveal::after{display:none}}
+  /* Grid-/Flex-Kinder dürfen schrumpfen – verhindert seitliches Überlaufen auf dem Handy */
+  :where(.wrap) :where(div,article,aside,figure,form,a,p,h1,h2,h3,blockquote){min-width:0}
 </style>
 </head>
 <body>

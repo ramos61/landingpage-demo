@@ -96,7 +96,7 @@
   .stat .num{font-family:'Oswald',system-ui,sans-serif;font-size:clamp(40px,4.4vw,60px);font-weight:500;color:var(--ink);line-height:1}
   .stat .num .v{color:var(--ink)}.stat .num .s{color:var(--accent)}
   .stat .lab{color:var(--muted);font-size:13px;margin-top:8px}
-  @media(max-width:900px){.intro{grid-template-columns:1fr;gap:56px}.portrait{max-width:440px}.portrait .badge{right:-8px}.stats{grid-template-columns:1fr 1fr;gap:10px}}
+  @media(max-width:900px){.intro{grid-template-columns:1fr;gap:56px}.portrait{max-width:440px}.portrait .badge{right:0}.stats{grid-template-columns:1fr 1fr;gap:10px}}
 
   /* image reveal */
   .img-reveal{position:relative;overflow:hidden;background:var(--panel)}
@@ -120,11 +120,11 @@
   .svc ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
   .svc li{font-size:12px;border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:20px;color:#dfe3e8}
   .more{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:22px;border:1px solid var(--line);border-radius:6px}
-  .more div{padding:26px 28px;border-right:1px solid var(--line);display:flex;gap:16px;align-items:flex-start}
-  .more div:last-child{border-right:none}
+  .more>div{padding:26px 28px;border-right:1px solid var(--line);display:flex;gap:16px;align-items:flex-start}
+  .more>div:last-child{border-right:none}
   .more h4{font-family:'Oswald',system-ui,sans-serif;text-transform:uppercase;font-weight:500;font-size:19px;letter-spacing:.5px}
   .more p{color:var(--muted);font-size:14px}
-  @media(max-width:900px){.services{grid-template-columns:1fr}.svc{aspect-ratio:4/3}.svc p{max-height:none;opacity:1}.more{grid-template-columns:1fr}.more div{border-right:none;border-bottom:1px solid var(--line)}}
+  @media(max-width:900px){.services{grid-template-columns:1fr}.svc{aspect-ratio:4/3}.svc p{max-height:none;opacity:1}.more{grid-template-columns:1fr}.more>div{border-right:none;border-bottom:1px solid var(--line)}}
 
   /* BEFORE/AFTER */
   .ba-sec{background:var(--bg2)}
@@ -231,6 +231,8 @@
   }
   a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--focus);outline-offset:3px}
   @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important}.reveal,.img-reveal img{opacity:1 !important;transform:none !important}.img-reveal::after{display:none}}
+  /* Grid-/Flex-Kinder dürfen schrumpfen – verhindert seitliches Überlaufen auf dem Handy */
+  :where(.wrap) :where(div,article,aside,figure,form,a,p,h1,h2,h3,blockquote){min-width:0}
 </style>
 </head>
 <body>

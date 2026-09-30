@@ -199,6 +199,8 @@
   a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--focus);outline-offset:3px}
   .contact a:focus-visible,.contact button:focus-visible,.contact input:focus-visible,.contact select:focus-visible,.contact textarea:focus-visible{outline-color:#fff}
   @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important}.reveal,.img-reveal img,.line span{opacity:1 !important;transform:none !important}.img-reveal::after{display:none}}
+  /* Grid-/Flex-Kinder dürfen schrumpfen – verhindert seitliches Überlaufen auf dem Handy */
+  :where(.wrap) :where(div,article,aside,figure,form,a,p,h1,h2,h3,blockquote){min-width:0}
 </style>
 </head>
 <body>

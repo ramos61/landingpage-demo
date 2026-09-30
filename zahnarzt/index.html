@@ -68,10 +68,11 @@
   /* TRUST BAR */
   .trustbar{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff}
   .tb{display:grid;grid-template-columns:repeat(4,1fr)}
-  .tb div{display:flex;align-items:center;gap:14px;padding:28px 20px;border-right:1px solid var(--line)}
-  .tb div:last-child{border-right:none}
+  .tb>div{display:flex;align-items:center;gap:14px;padding:28px 20px;border-right:1px solid var(--line)}
+  .tb>div:last-child{border-right:none}
   .tb b{display:block;font-size:15px;font-weight:600}.tb span{color:var(--muted);font-size:13px}
-  @media(max-width:900px){.tb{grid-template-columns:1fr 1fr}.tb div:nth-child(2){border-right:none}.tb div:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+  @media(max-width:900px){.tb{grid-template-columns:1fr 1fr}.tb>div:nth-child(2){border-right:none}.tb>div:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+  @media(max-width:560px){.tb{grid-template-columns:1fr}.tb>div{border-right:none;border-bottom:1px solid var(--line);padding:18px 4px}}
 
   .sec{padding:130px 0;position:relative}
   .soft{background:var(--soft)}
@@ -206,6 +207,8 @@
   }
   a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--focus);outline-offset:3px}
   @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important}.reveal,.img-reveal img{opacity:1 !important;transform:none !important}.img-reveal::after{display:none}}
+  /* Grid-/Flex-Kinder dürfen schrumpfen – verhindert seitliches Überlaufen auf dem Handy */
+  :where(.wrap) :where(div,article,aside,figure,form,a,p,h1,h2,h3,blockquote){min-width:0}
 </style>
 </head>
 <body>
