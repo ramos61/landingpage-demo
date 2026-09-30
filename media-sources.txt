@@ -12,3 +12,11 @@ handwerk/media/meister.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLr
 zahnarzt/media/raum.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_205246_bbe4fbfc-60e7-4a4f-a05d-ed577f387840.png
 zahnarzt/media/team-sommer.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_205246_ef8e49f0-d2ad-4668-88a6-5fd4e2714f57.png
 zahnarzt/media/team-feld.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_205337_9186daf8-e6df-41ec-8fdd-44835dc6713c.png
+zahnarzt/media/prophylaxe.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_205407_7bfba200-da39-41fa-a2f6-2d3094d285e9.png
+zahnarzt/media/team-braun.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_205407_15fb6ba0-94b0-4ca0-bdcf-4431c69a1cda.png
+dienstleister-b/media/ansatz.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_205407_e86bef73-1d0a-4ca6-ac00-881ae9f57f01.png
+dienstleister-b/media/gruenderin.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_205446_1acbe7d8-d5f4-4f40-834c-e6d2effcf246.png
+dienstleister-b/media/studio.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_205447_cd004315-65a6-44fe-86cc-39bd773bacd5.png
+restaurant/media/tagliatelle.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_205446_e6e2b414-3b04-4735-82c3-d22dbbdb801c.png
+restaurant/media/burrata.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_205519_c64caaa3-c931-4f06-b0b1-e36e867f0ab8.png
+restaurant/media/tiramisu.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_205518_842b5711-375f-4e2f-ab21-7d6059508eac.png
