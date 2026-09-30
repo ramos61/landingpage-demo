@@ -1,7 +1,7 @@
 # <zielpfad> <url>  – wird von .github/workflows/fetch-media.yml verarbeitet
 handwerk/media/hero.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_204846_247edeb2-f692-4f32-84a9-22d4674d112f.png
 zahnarzt/media/hero.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_205246_103dd203-7faf-4dca-bcbe-c1c206e9ef5f.png
-dienstleister-b/media/hero.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_205325_93d86503-57f8-4fa2-8722-f678ac2836d7.png
+dienstleister/media/hero.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_205325_93d86503-57f8-4fa2-8722-f678ac2836d7.png
 restaurant/media/hero.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_205324_187475a7-1050-4ebc-bed7-d4cbd163a3d0.png
 handwerk/media/rohbau.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_205246_1259fc39-f69b-4e84-8306-4c94d117714c.png
 handwerk/media/sanierung.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_205246_ef33e9be-fd62-4118-a0f6-2f597ebe19b4.png
@@ -14,9 +14,9 @@ zahnarzt/media/team-sommer.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBK
 zahnarzt/media/team-feld.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_205337_9186daf8-e6df-41ec-8fdd-44835dc6713c.png
 zahnarzt/media/prophylaxe.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_205407_7bfba200-da39-41fa-a2f6-2d3094d285e9.png
 zahnarzt/media/team-braun.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_205407_15fb6ba0-94b0-4ca0-bdcf-4431c69a1cda.png
-dienstleister-b/media/ansatz.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_205407_e86bef73-1d0a-4ca6-ac00-881ae9f57f01.png
-dienstleister-b/media/gruenderin.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_205446_1acbe7d8-d5f4-4f40-834c-e6d2effcf246.png
-dienstleister-b/media/studio.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_205447_cd004315-65a6-44fe-86cc-39bd773bacd5.png
+dienstleister/media/ansatz.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_205407_e86bef73-1d0a-4ca6-ac00-881ae9f57f01.png
+dienstleister/media/gruenderin.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_205446_1acbe7d8-d5f4-4f40-834c-e6d2effcf246.png
+dienstleister/media/studio.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_205447_cd004315-65a6-44fe-86cc-39bd773bacd5.png
 restaurant/media/tagliatelle.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_205446_e6e2b414-3b04-4735-82c3-d22dbbdb801c.png
 restaurant/media/burrata.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_205519_c64caaa3-c931-4f06-b0b1-e36e867f0ab8.png
 restaurant/media/tiramisu.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_205518_842b5711-375f-4e2f-ab21-7d6059508eac.png
@@ -25,3 +25,6 @@ restaurant/media/terrasse.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKI
 restaurant/media/weinabend.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_205555_3637e5bc-580d-4272-9ae6-9815cf0e1cbf.png
 restaurant/media/pastakurs.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_205637_ed55d3db-97f5-48bc-a84b-199693d7c1bc.png
 restaurant/media/private-dining.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_205637_21dd1f77-fb87-4080-a83a-31e0397f6c43.png
+handwerk/media/hero.mp4 https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_205924_d8e92d2d-f8eb-4cbd-a86d-5fae2e441abb.mp4
+zahnarzt/media/hero.mp4 https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_205924_93980327-8140-4861-b0ba-1dbc0011fd94.mp4
+restaurant/media/hero.mp4 https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_205925_48f585e1-c12e-48d6-b758-12ccb37aa9ad.mp4
