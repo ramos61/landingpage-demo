@@ -1,2 +1,14 @@
 # <zielpfad> <url>  – wird von .github/workflows/fetch-media.yml verarbeitet
 handwerk/media/hero.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_204846_247edeb2-f692-4f32-84a9-22d4674d112f.png
+zahnarzt/media/hero.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_205246_103dd203-7faf-4dca-bcbe-c1c206e9ef5f.png
+dienstleister-b/media/hero.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_205325_93d86503-57f8-4fa2-8722-f678ac2836d7.png
+restaurant/media/hero.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_205324_187475a7-1050-4ebc-bed7-d4cbd163a3d0.png
+handwerk/media/rohbau.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_205246_1259fc39-f69b-4e84-8306-4c94d117714c.png
+handwerk/media/sanierung.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_205246_ef33e9be-fd62-4118-a0f6-2f597ebe19b4.png
+handwerk/media/innenausbau.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_205246_ea9ad4d0-5471-48aa-8d2f-d225566eb0e0.png
+handwerk/media/nachher.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_205246_91983ac5-f34c-4213-87be-252e7081713f.png
+handwerk/media/vorher.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_205326_b95ed320-d0b9-4057-8e51-cbdda270beb7.png
+handwerk/media/meister.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_205246_e319b66a-1b87-47e8-89d0-70e5802266ca.png
+zahnarzt/media/raum.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_205246_bbe4fbfc-60e7-4a4f-a05d-ed577f387840.png
+zahnarzt/media/team-sommer.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_205246_ef8e49f0-d2ad-4668-88a6-5fd4e2714f57.png
+zahnarzt/media/team-feld.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_205337_9186daf8-e6df-41ec-8fdd-44835dc6713c.png
