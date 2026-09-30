@@ -1,0 +1,2 @@
+# <zielpfad> <url>  – wird von .github/workflows/fetch-media.yml verarbeitet
+handwerk/media/hero.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_204846_247edeb2-f692-4f32-84a9-22d4674d112f.png

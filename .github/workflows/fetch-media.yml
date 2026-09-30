@@ -1,0 +1,52 @@
+# Lädt KI-generierte Medien (Higgsfield) herunter, optimiert sie fürs Web
+# und legt sie im Repo ab. Quelle: media-sources.txt  (Format: <zielpfad> <url>)
+name: Medien laden & optimieren
+
+on:
+  push:
+    paths: ['media-sources.txt']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-media-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: ffmpeg installieren
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+
+      - name: Herunterladen & optimieren
+        run: |
+          set -euo pipefail
+          while read -r dest url; do
+            case "$dest" in ''|\#*) continue ;; esac
+            if [ -f "$dest" ]; then echo "vorhanden: $dest"; continue; fi
+            mkdir -p "$(dirname "$dest")"
+            tmp="$(mktemp)"
+            curl -fsSL --retry 3 "$url" -o "$tmp"
+            case "$dest" in
+              *.webp) ffmpeg -loglevel error -y -i "$tmp" -vf "scale='min(1920,iw)':-2" -c:v libwebp -quality 78 "$dest" ;;
+              *.jpg)  ffmpeg -loglevel error -y -i "$tmp" -vf "scale='min(1920,iw)':-2" -q:v 4 "$dest" ;;
+              *.mp4)  ffmpeg -loglevel error -y -i "$tmp" -an -vf "scale='min(1920,iw)':-2,fps=30" \
+                        -c:v libx264 -preset slow -crf 27 -pix_fmt yuv420p -movflags +faststart "$dest" ;;
+              *)      cp "$tmp" "$dest" ;;
+            esac
+            echo "ok: $dest ($(du -h "$dest" | cut -f1))"
+          done < media-sources.txt
+
+      - name: Ergebnis committen
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898237+github-actions[bot]@users.noreply.github.com"
+          git add -A -- ':!media-sources.txt'
+          if git diff --cached --quiet; then echo "Keine neuen Medien"; exit 0; fi
+          git commit -m "Medien geladen und optimiert"
+          git push
