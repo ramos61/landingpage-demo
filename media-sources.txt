@@ -20,3 +20,8 @@ dienstleister-b/media/studio.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8i
 restaurant/media/tagliatelle.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_205446_e6e2b414-3b04-4735-82c3-d22dbbdb801c.png
 restaurant/media/burrata.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_205519_c64caaa3-c931-4f06-b0b1-e36e867f0ab8.png
 restaurant/media/tiramisu.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_205518_842b5711-375f-4e2f-ab21-7d6059508eac.png
+restaurant/media/pasta-haende.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_205556_d0f5e07c-1f0f-4751-9fb4-2e2caca199c0.png
+restaurant/media/terrasse.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_205555_99c39172-8475-49ec-9d59-16f80556ff08.png
+restaurant/media/weinabend.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_205555_3637e5bc-580d-4272-9ae6-9815cf0e1cbf.png
+restaurant/media/pastakurs.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_205637_ed55d3db-97f5-48bc-a84b-199693d7c1bc.png
+restaurant/media/private-dining.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_205637_21dd1f77-fb87-4080-a83a-31e0397f6c43.png
