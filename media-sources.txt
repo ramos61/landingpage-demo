@@ -29,3 +29,9 @@ handwerk/media/hero.mp4 https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQi
 zahnarzt/media/hero.mp4 https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_205924_93980327-8140-4861-b0ba-1dbc0011fd94.mp4
 restaurant/media/hero.mp4 https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_205925_48f585e1-c12e-48d6-b758-12ccb37aa9ad.mp4
 dienstleister/media/hero.mp4 https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20260930_205925_c4025ce8-0c3e-49a9-8546-58cc345ec41a.mp4
+bestatter/media/hero.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20261005_124130_184cb8d2-e9cf-476f-bc00-aa333ba0b74d.png
+haustechnik/media/hero.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20261005_124130_7e122831-3b95-476b-afcf-a8f5a7f1ce10.png
+bestatter/media/abschied.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20261005_124129_85daa3dc-41bc-46e1-a2f7-a4cdd019c71a.png
+bestatter/media/beratung.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20261005_124205_039210b6-1f22-44df-b9ac-80dfa198db48.png
+bestatter/media/inhaberin.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20261005_124205_6124010d-af55-4e51-a681-4806000c1b40.png
+bestatter/media/nachfolger.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20261005_124204_5e0a823a-f755-4083-8acf-344e8a9ca6ac.png
