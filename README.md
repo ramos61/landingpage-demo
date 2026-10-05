@@ -1,11 +1,13 @@
 # Referenz-Landingpages
 
-Vier Demo-Websites für Kundenakquise – live unter **https://ramos61.github.io/landingpage-demo/**
+Sechs Demo-Websites für Kundenakquise – live unter **https://ramos61.github.io/landingpage-demo/**
 
 | Branche | Ordner | Demo |
 |---|---|---|
 | Handwerk & Bau | `handwerk/` | Meisterbau Krüger – dunkel, Hero-Video, Vorher/Nachher-Slider |
+| Heizung & Sanitär | `haustechnik/` | Volkmann Haustechnik – Förder-Rechner, 24/7-Notdienst |
 | Praxis & Gesundheit | `zahnarzt/` | Praxis Dr. Sommer – hell, Team-Portraits, Online-Termin |
+| Bestattung | `bestatter/` | Weidenhof Bestattungen – würdevoll, Trauerfall-Hilfe, Vorsorge |
 | Beratung & Agentur | `dienstleister/` | Meridian – editorial, Studio-Film, Hover-Bildvorschau |
 | Restaurant & Gastronomie | `restaurant/` | Osteria Olivo – Holzofen-Video, Speisekarte, Reservierung |
 
@@ -21,4 +23,4 @@ Alle Firmen sind erfunden. Fotos und Videos sind KI-generiert (Higgsfield: GPT I
 
 1. Zeile in `media-sources.txt` ergänzen: `<zielpfad> <url>` (z. B. `handwerk/media/team.webp https://…png`).
 2. Committen und pushen – der Workflow `.github/workflows/fetch-media.yml` lädt die Datei, optimiert sie
-   (WebP bzw. MP4) und committet das Ergebnis automatisch. Vorhandene Dateien werden nicht überschrieben.
+   (WebP bzw. MP4 als nahtloser Loop) und committet das Ergebnis automatisch. Vorhandene Dateien werden nicht überschrieben.
