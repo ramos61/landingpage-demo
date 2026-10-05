@@ -233,6 +233,18 @@
   @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important}.reveal,.img-reveal img{opacity:1 !important;transform:none !important}.img-reveal::after{display:none}}
   /* Grid-/Flex-Kinder dürfen schrumpfen – verhindert seitliches Überlaufen auf dem Handy */
   :where(.wrap) :where(div,article,aside,figure,form,a,p,h1,h2,h3,blockquote){min-width:0}
+
+  /* === Mobile-Feinschliff (Audit) === */
+  .burger{flex:0 0 auto}
+  .brand{min-width:0}
+  .nav-in{gap:12px}
+  .demo-badge{min-height:40px}
+  @media(max-width:900px){
+    input,select,textarea{font-size:16px !important}  /* verhindert iOS-Zoom beim Antippen */
+    .chip,.tab,.slot,.opt{min-height:44px}
+  }
+  @media(max-width:420px){.brand{font-size:15px;letter-spacing:.6px;gap:9px}.brand svg{width:30px;height:30px}.wrap{padding:0 20px}}
+  @media(max-width:600px){h1,h2,h3,blockquote{overflow-wrap:break-word;hyphens:auto;-webkit-hyphens:auto}}
 </style>
 </head>
 <body>

@@ -17,7 +17,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <noscript><style>.reveal,.img-reveal img{opacity:1 !important;transform:none !important}.img-reveal::after{display:none}</style></noscript>
 <style>
-  :root{--bg:#ffffff;--soft:#f3f6f9;--navy:#0b2f4a;--navy-d:#08223a;--ink:#0d1b26;--muted:#5b6b78;--line:#e2e8ee;--hot:#e5482d;--cold:#2f7fd8;--grad:linear-gradient(100deg,#e5482d,#b8508a 50%,#2f7fd8);
+  :root{--bg:#ffffff;--soft:#f3f6f9;--navy:#0b2f4a;--navy-d:#08223a;--ink:#0d1b26;--muted:#5b6b78;--line:#e2e8ee;--hot:#c8361c;--cold:#2165bf;--grad:linear-gradient(100deg,#e5482d,#b8508a 50%,#2f7fd8);
     --nav-bg:#ffffff;--nav-ink:#0d1b26;--nav-line:#e2e8ee;--focus:#2f7fd8;--ease:cubic-bezier(.2,.7,.2,1)}
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
@@ -31,7 +31,7 @@
   .tag i{width:8px;height:8px;border-radius:50%;background:var(--grad)}
   .btn{display:inline-flex;align-items:center;gap:10px;background:var(--navy);color:#fff;font-weight:600;padding:16px 28px;border-radius:12px;font-size:15px;border:none;cursor:pointer;font-family:inherit;transition:transform .25s var(--ease),box-shadow .25s,background .25s}
   .btn:hover{transform:translateY(-2px);box-shadow:0 16px 36px rgba(11,47,74,.3);background:var(--navy-d)}
-  .btn.hot{background:var(--hot)}.btn.hot:hover{background:#c93a21;box-shadow:0 16px 36px rgba(229,72,45,.35)}
+  .btn.hot{background:var(--hot)}.btn.hot:hover{background:#a92c15;box-shadow:0 16px 36px rgba(229,72,45,.35)}
   .btn.glass{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.3);backdrop-filter:blur(10px)}
   .btn.glass:hover{background:rgba(255,255,255,.2);box-shadow:none}
   .btn svg{transition:transform .25s var(--ease)}.btn:hover svg{transform:translateX(4px)}
@@ -253,6 +253,17 @@
   a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--focus);outline-offset:3px}
   @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important}.reveal,.img-reveal img{opacity:1 !important;transform:none !important}.img-reveal::after{display:none}}
   :where(.wrap) :where(div,article,aside,figure,form,a,p,h1,h2,h3,blockquote,label){min-width:0}
+
+  /* === Mobile-Feinschliff (Audit) === */
+  .burger{flex:0 0 auto}
+  .brand{min-width:0}
+  .nav-in{gap:12px}
+  .demo-badge{min-height:40px}
+  @media(max-width:900px){
+    input,select,textarea{font-size:16px !important}  /* verhindert iOS-Zoom beim Antippen */
+    .chip,.tab,.slot,.opt{min-height:44px}
+  }
+  @media(max-width:600px){h1,h2,h3,blockquote{overflow-wrap:break-word;hyphens:auto;-webkit-hyphens:auto}}
 </style>
 </head>
 <body>

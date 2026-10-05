@@ -17,7 +17,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <noscript><style>.reveal,.img-reveal img{opacity:1 !important;transform:none !important}.img-reveal::after{display:none}</style></noscript>
 <style>
-  :root{--teal:#0fb5ba;--teal-d:#0a8f93;--teal-l:#e7f8f8;--bg:#ffffff;--soft:#f5fafa;--ink:#10292e;--muted:#5a7176;--line:#e3eef0;
+  :root{--teal:#0fb5ba;--teal-d:#0b7377;--teal-l:#e7f8f8;--bg:#ffffff;--soft:#f5fafa;--ink:#10292e;--muted:#5a7176;--line:#e3eef0;
     --nav-bg:#ffffff;--nav-ink:#10292e;--nav-line:#e3eef0;--focus:#0fb5ba;--ease:cubic-bezier(.2,.7,.2,1)}
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
@@ -28,8 +28,8 @@
   .wrap{max-width:1220px;margin:0 auto;padding:0 28px}
   .eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--teal-d);font-size:13px;font-weight:600;letter-spacing:.5px;margin-bottom:18px;background:var(--teal-l);padding:7px 14px;border-radius:40px}
   .eyebrow i{width:7px;height:7px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 4px rgba(15,181,186,.18)}
-  .btn{display:inline-flex;align-items:center;gap:10px;background:var(--teal);color:#fff;font-weight:500;padding:16px 30px;border-radius:50px;font-size:15px;border:none;cursor:pointer;font-family:inherit;transition:transform .25s var(--ease),box-shadow .25s,background .25s}
-  .btn:hover{transform:translateY(-2px);background:var(--teal-d);box-shadow:0 16px 36px rgba(15,181,186,.35)}
+  .btn{display:inline-flex;align-items:center;gap:10px;background:#0b7d81;color:#fff;font-weight:500;padding:16px 30px;border-radius:50px;font-size:15px;border:none;cursor:pointer;font-family:inherit;transition:transform .25s var(--ease),box-shadow .25s,background .25s}
+  .btn:hover{transform:translateY(-2px);background:#086266;box-shadow:0 16px 36px rgba(15,181,186,.35)}
   .btn.ghost{background:rgba(255,255,255,.85);color:var(--ink);border:1px solid var(--line);backdrop-filter:blur(8px)}
   .btn.ghost:hover{background:#fff;box-shadow:0 10px 30px rgba(16,41,46,.08)}
   .btn svg{transition:transform .25s var(--ease)}.btn:hover svg{transform:translateX(4px)}
@@ -51,7 +51,7 @@
   .hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(255,255,255,.97) 0%,rgba(255,255,255,.88) 32%,rgba(255,255,255,0) 60%)}
   .hero-in{padding-top:150px;padding-bottom:110px;width:100%}
   .hero h1{font-size:clamp(42px,5.8vw,82px);max-width:640px;font-weight:600}
-  .hero h1 span{color:var(--teal)}
+  .hero h1 span{color:#0a8e92}
   .hero p.lead{color:var(--muted);font-size:clamp(16px,1.4vw,19px);max-width:470px;margin:24px 0 36px}
   .hero-cta{display:flex;gap:12px;flex-wrap:wrap}
   .hero-trust{display:flex;align-items:center;gap:16px;margin-top:40px}
@@ -158,7 +158,7 @@
   .slots{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
   .slot{font-family:inherit;font-size:14px;font-weight:500;padding:10px 16px;border-radius:12px;border:1px solid var(--line);background:#fff;cursor:pointer;transition:all .2s}
   .slot:hover{border-color:var(--teal)}
-  .slot[aria-pressed="true"]{background:var(--teal);border-color:var(--teal);color:#fff}
+  .slot[aria-pressed="true"]{background:#0b7d81;border-color:#0b7d81;color:#fff}
   .field{margin-bottom:14px}
   .field label,.lbl{display:block;font-size:13px;font-weight:600;margin-bottom:7px}
   .field input,.field select{width:100%;background:var(--soft);border:1px solid var(--line);border-radius:14px;padding:13px 16px;font-family:inherit;font-size:15px;transition:border-color .2s,background .2s}
@@ -209,6 +209,17 @@
   @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important}.reveal,.img-reveal img{opacity:1 !important;transform:none !important}.img-reveal::after{display:none}}
   /* Grid-/Flex-Kinder dürfen schrumpfen – verhindert seitliches Überlaufen auf dem Handy */
   :where(.wrap) :where(div,article,aside,figure,form,a,p,h1,h2,h3,blockquote){min-width:0}
+
+  /* === Mobile-Feinschliff (Audit) === */
+  .burger{flex:0 0 auto}
+  .brand{min-width:0}
+  .nav-in{gap:12px}
+  .demo-badge{min-height:40px}
+  @media(max-width:900px){
+    input,select,textarea{font-size:16px !important}  /* verhindert iOS-Zoom beim Antippen */
+    .chip,.tab,.slot,.opt{min-height:44px}
+  }
+  @media(max-width:600px){h1,h2,h3,blockquote{overflow-wrap:break-word;hyphens:auto;-webkit-hyphens:auto}}
 </style>
 </head>
 <body>

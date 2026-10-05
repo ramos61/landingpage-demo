@@ -17,7 +17,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
 <noscript><style>.reveal,.img-reveal img{opacity:1 !important;transform:none !important}.img-reveal::after{display:none}</style></noscript>
 <style>
-  :root{--bg:#fbf6ee;--paper:#fffaf2;--dark:#1b1411;--dark2:#241b16;--ink:#2b2118;--muted:#7a6b5c;--olive:#4a5a2c;--olive-d:#34401e;--tomato:#d9432b;--tomato-d:#b8331e;--gold:#e0a33a;--line:#eadfcd;
+  :root{--bg:#fbf6ee;--paper:#fffaf2;--dark:#1b1411;--dark2:#241b16;--ink:#2b2118;--muted:#7a6b5c;--olive:#4a5a2c;--olive-d:#34401e;--tomato:#bf3720;--tomato-d:#9f2c18;--gold:#e0a33a;--line:#eadfcd;
     --nav-bg:#1b1411;--nav-ink:#f3ead9;--nav-line:rgba(255,255,255,.1);--focus:#e0a33a;--ease:cubic-bezier(.2,.7,.2,1)}
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
@@ -232,6 +232,17 @@
   @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important}.reveal,.img-reveal img{opacity:1 !important;transform:none !important}.img-reveal::after{display:none}}
   /* Grid-/Flex-Kinder dürfen schrumpfen – verhindert seitliches Überlaufen auf dem Handy */
   :where(.wrap) :where(div,article,aside,figure,form,a,p,h1,h2,h3,blockquote){min-width:0}
+
+  /* === Mobile-Feinschliff (Audit) === */
+  .burger{flex:0 0 auto}
+  .brand{min-width:0}
+  .nav-in{gap:12px}
+  .demo-badge{min-height:40px}
+  @media(max-width:900px){
+    input,select,textarea{font-size:16px !important}  /* verhindert iOS-Zoom beim Antippen */
+    .chip,.tab,.slot,.opt{min-height:44px}
+  }
+  @media(max-width:600px){h1,h2,h3,blockquote{overflow-wrap:break-word;hyphens:auto;-webkit-hyphens:auto}}
 </style>
 </head>
 <body>
