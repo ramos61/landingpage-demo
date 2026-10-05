@@ -35,3 +35,14 @@ bestatter/media/abschied.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIP
 bestatter/media/beratung.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20261005_124205_039210b6-1f22-44df-b9ac-80dfa198db48.png
 bestatter/media/inhaberin.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20261005_124205_6124010d-af55-4e51-a681-4806000c1b40.png
 bestatter/media/nachfolger.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20261005_124204_5e0a823a-f755-4083-8acf-344e8a9ca6ac.png
+bestatter/media/wald.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20261005_124247_e26ff300-d3d7-493b-aa51-e8c51d17e6f6.png
+bestatter/media/see.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20261005_124246_28851119-5211-445e-9a63-2b4e8b02ce49.png
+bestatter/media/kerze.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20261005_124247_af773479-8e49-4bab-87ed-afb637507067.png
+haustechnik/media/heizraum.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20261005_124406_7e08209e-ceb7-4ab1-b4fa-c7681e67eeb9.png
+haustechnik/media/bad.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20261005_124407_db8fff0c-010a-4d48-841f-6d28676aafaf.png
+haustechnik/media/sanitaer.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20261005_124406_2f05b70b-44a1-4148-8eac-02b82413b736.png
+haustechnik/media/notdienst.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20261005_124629_bd3ebb65-0c65-4d68-b4d0-3d2c4274a60f.png
+haustechnik/media/meister.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20261005_124629_ca305b68-e477-42e2-bbab-35228d8bc85c.png
+haustechnik/media/wohnen.webp https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20261005_124629_fcb9d0ca-8402-4449-8795-3dc8a67370a4.png
+bestatter/media/hero.mp4 https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20261005_124355_921ffa41-53f1-4724-bc61-3441ac48b8cd.mp4
+haustechnik/media/hero.mp4 https://d8j0ntlcm91z4.cloudfront.net/user_3F8iBKIPLrQFQiOCOrpDkuHKp0R/hf_20261005_124355_e931796a-e398-47aa-bf71-86f015054ae9.mp4

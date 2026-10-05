@@ -35,8 +35,12 @@ jobs:
             case "$dest" in
               *.webp) ffmpeg -nostdin -loglevel error -y -i "$tmp" -vf "scale='min(1920,iw)':-2" -c:v libwebp -quality 78 "$dest" ;;
               *.jpg)  ffmpeg -nostdin -loglevel error -y -i "$tmp" -vf "scale='min(1920,iw)':-2" -q:v 4 "$dest" ;;
-              *.mp4)  ffmpeg -nostdin -loglevel error -y -i "$tmp" -an -vf "scale='min(1920,iw)':-2,fps=30" \
-                        -c:v libx264 -preset slow -crf 27 -pix_fmt yuv420p -movflags +faststart "$dest" ;;
+              *.mp4)  # nahtloser Loop: letzte Sekunde blendet weich in den Anfang über
+                      d=$(ffprobe -v error -show_entries format=duration -of csv=p=0 "$tmp")
+                      off=$(python3 -c "print(round($d-2,3))")
+                      ffmpeg -nostdin -loglevel error -y -i "$tmp" -an -filter_complex \
+                        "[0:v]scale='min(1920,iw)':-2,fps=30,split[a][b];[a]trim=start=1,setpts=PTS-STARTPTS[m];[b]trim=0:1,setpts=PTS-STARTPTS[h];[m][h]xfade=transition=fade:duration=1:offset=$off,format=yuv420p[v]" \
+                        -map "[v]" -c:v libx264 -preset slow -crf 26 -movflags +faststart "$dest" ;;
               *)      cp "$tmp" "$dest" ;;
             esac
             echo "ok: $dest ($(du -h "$dest" | cut -f1))"
